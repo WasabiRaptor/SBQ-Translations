@@ -1,0 +1,20 @@
+{
+	"itemName" : "sbqLockedItem",
+	"shortdescription" : "Блокировка предметов",
+	"description" : "Некоторые предметы нельзя использовать, находясь внутри хищника; чтобы разблокировать их, удерживайте эту кнопку, когда выйдете наружу.",
+	"price" : 1,
+	"maxStack" : 1,
+	"rarity" : "essential",
+	"category" : "mysteriousReward",
+	"twoHanded" : true,
+	"itemTags" : ["tool"],
+	"inventoryIcon" : "/interface/lockicon.png",
+
+	"retainScriptStorageInItem": true,
+	"scripts" : [
+		"sbqLockedItem.lua",
+		"/items/active/sbqController/sbqControllerData.lua",
+		"/items/active/activeitemOverrides.lua"
+	],
+	"scriptDelta" : 5
+}

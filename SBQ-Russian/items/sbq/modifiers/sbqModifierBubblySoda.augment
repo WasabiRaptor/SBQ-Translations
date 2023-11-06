@@ -1,0 +1,15 @@
+{
+	"itemName" : "sbqModifierBubblySoda",
+	"price" : 10,
+	"rarity" : "Uncommon",
+	"category" : "craftingMaterial",
+	"inventoryIcon" : "sbqModifierBubblySoda.png",
+	"description" : "Немного шипучей газировки - любой хищник, выпивший ее, будет так отрыгивать, что его добыче будет легче убежать.",
+	"shortdescription" : "Газировка",
+	"itemTags" : [ "reagent", "vsopill" ],
+
+	"scripts": ["/items/sbq/modifiers/sbqModifier.lua"],
+	"sbqModifier": {
+		"escapeDifficulty": -10
+	}
+}

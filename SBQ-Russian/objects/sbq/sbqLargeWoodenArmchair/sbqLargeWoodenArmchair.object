@@ -1,0 +1,48 @@
+{
+  "objectName" : "sbqLargeWoodenArmchair",
+  "colonyTags" : ["avian","avianvillage","drimyr","drimyrvillage","large"],
+  "rarity" : "Common",
+  "description" : "Большое удобное деревянное кресло.",
+  "shortdescription" : "Большое деревянное кресло",
+  "race" : "generic",
+  "category" : "furniture",
+  "price" : 85,
+
+  "apexDescription" : "Это кресло выглядит красивым и удобным... хотя и немного большим.",
+  "avianDescription" : "Красочный и удобный... и большой",
+  "floranDescription" : "Большое мягкое кресло с гладкими деревянными подлокотниками.",
+  "glitchDescription" : "Содержание. В этом огромном кресле я мог(ла) бы с удовольствием провести несколько часов.",
+  "humanDescription" : "Большое деревянное кресло.",
+  "hylotlDescription" : "Удобно... не уверен(а) насчет скромности.",
+  "novakidDescription" : "Привлекательное на вид кресло, я думаю, что оно было сделано для более крупных людей.",
+
+  "inventoryIcon" : "/objects/sbq/sbqLargeWoodenArmchair/woodenarmchair1icon.png?replace;6f2919=30196f;a85636=5f36a8;e0975c=a25ce0;d9c189=c789d9;f7e7b2=edb2f7",
+  "orientations" : [
+    {
+      "image" : "sbqLargeWoodenArmchair.png?replace;6f2919=30196f;a85636=5f36a8;e0975c=a25ce0;d9c189=c789d9;f7e7b2=edb2f7",
+      "imagePosition" : [-24, 0],
+      "sitCoverImage" : "/objects/sbq/sbqLargeWoodenArmchair/sbqLargeWoodenArmchaircover.png?replace;6f2919=30196f;a85636=5f36a8;e0975c=a25ce0;d9c189=c789d9;f7e7b2=edb2f7",
+      "direction" : "left",
+      "flipImages" : true,
+
+      "sitPosition" : [4, 31],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "sbqLargeWoodenArmchair.png?replace;6f2919=30196f;a85636=5f36a8;e0975c=a25ce0;d9c189=c789d9;f7e7b2=edb2f7",
+      "imagePosition" : [-24, 0],
+      "sitCoverImage" : "/objects/sbq/sbqLargeWoodenArmchair/sbqLargeWoodenArmchaircover.png?replace;6f2919=30196f;a85636=5f36a8;e0975c=a25ce0;d9c189=c789d9;f7e7b2=edb2f7",
+      "direction" : "right",
+
+      "sitPosition" : [4, 31],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "bottom" ]
+    }
+  ],
+
+  "objectType" : "loungeable",
+  "sitFlipDirection" : false
+}

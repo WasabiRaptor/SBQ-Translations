@@ -1,0 +1,18 @@
+{
+	"itemName" : "sbqModifierDietPill",
+	"price" : 10,
+	"rarity" : "Uncommon",
+	"category" : "craftingMaterial",
+	"inventoryIcon" : "sbqModifierDietPill.png",
+	"description" : "Таблетка, помогающая хищникам избавиться от лишнего жира.",
+	"shortdescription" : "Диетические таблетка",
+	"itemTags" : [ "reagent", "vsopill" ],
+
+	// "pillAdd" : {},
+	// "pillRemove" : ["fatten"],
+
+	"scripts": ["/items/sbq/modifiers/sbqModifier.lua"],
+	"sbqModifier": {
+		"bellyVisualMin": -1
+	}
+}

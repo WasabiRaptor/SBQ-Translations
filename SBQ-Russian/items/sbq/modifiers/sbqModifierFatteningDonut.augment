@@ -1,0 +1,25 @@
+{
+	"itemName" : "sbqModifierFatteningDonut",
+	"price" : 10,
+	"rarity" : "Uncommon",
+	"category" : "craftingMaterial",
+	"inventoryIcon" : "sbqModifierFatteningDonut.png",
+	"description" : "Большой пончик, который делает животы некоторых хищников более пудовыми. Пригодится, если у тебя недостаточно друзей, чтобы накормить их~",
+	"shortdescription" : "Жирный пончик",
+	"itemTags" : [ "reagent", "sbqpill" ],
+
+	// "pillAdd" : {
+	// 	"fatten" : {
+	// 		"name" : "Fattened",
+	// 		"icon" : "/items/sbq/pills/sbqModifierFatteningDonut.png",
+	// 		"description" : "Add pudge to the belly.",
+	// 		"value":1.0
+	// 	}
+	// },
+	// "pillRemove" : [],
+
+	"scripts": ["/items/sbq/modifiers/sbqModifier.lua"],
+	"sbqModifier": {
+		"bellyVisualMin": 1
+	}
+}

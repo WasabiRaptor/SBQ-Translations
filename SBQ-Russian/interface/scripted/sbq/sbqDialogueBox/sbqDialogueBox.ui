@@ -1,0 +1,46 @@
+{ //  -*- grammar-ext: json -*-
+	"style" : "panel", // window (has titlebar), panel (just a frame) etc.
+	"size" : [256, 72], // *internal* size (not including chrome)
+	"uniqueBy" : "path",
+	"anchor" : ["centerBottom", [0,-64]],
+	"scripts" : [ "sbqDialogueBox.lua" ],
+	"children" : [
+		{ "type" : "layout", "id" : "dialogueLayout", "mode" : "horizontal", "expandMode" : [1, 1], "children" : [
+			{ "type" : "layout", "id" : "portraitLayout", "mode" : "vertical", "expandMode" : [0, 1], "children" : [
+				[
+					{ "type" : "image", "id": "dialoguePortrait", "file" : "/empty_image.png", "visible" : false },
+					{ "type" : "canvas", "id": "dialoguePortraitCanvas", "size" : [64,64], "visible" : false }
+				],
+				{ "type" : "label", "id" : "nameLabel", "text": "", "inline" : true }
+			]},
+			{ "type" : "layout", "id" : "dialogueLayout", "mode" : "vertical", "expandMode" : [1, 1], "children" : [
+				{ "type" : "panel", "id" : "dialogueBox", "expandMode" : [1, 1], "style" : "convex", "children" : [
+					{ "type" : "scrollArea", "children" : [{ "type" : "label", "id" : "dialogueLabel", "text": ""}]}
+				]},
+				[
+					{ "type" : "iconButton", "id" : "close", "image" : "/interface/x.png", "hoverImage" : "/interface/xhover.png", "pressImage" : "/interface/xpress.png" },
+					{ "type" : "button", "id" : "dialogueCont", "expandMode" : [1, 0], "caption" : "..." },
+					{ "type" : "iconButton", "visible" : false, "id" : "oralVore", "toolTip" : "Съешь меня!", "image" : "/items/active/sbqController/oralVore.png" },
+					{ "type" : "iconButton", "visible" : false, "id" : "tailVore", "tooltip" : "Пусть твой хвост съест меня!", "image" : "/items/active/sbqController/tailVore.png" },
+					{ "type" : "iconButton", "visible" : false, "id" : "absorbVore", "toolTip" : "Поглоти меня!", "image" : "/items/active/sbqController/absorbVore.png" },
+					{ "type" : "iconButton", "visible" : false, "id" : "navelVore", "toolTip" : "Помести меня в свой пупок!", "image" : "/items/active/sbqController/navelVore.png" },
+
+					{ "type" : "iconButton", "visible" : false, "id" : "analVore", "toolTip" : "Засунь меня себе в задницу!", "image" : "/items/active/sbqController/analVore.png" },
+					{ "type" : "iconButton", "visible" : false, "id" : "cockVore", "toolTip" : "Засунь меня в свой член!", "image" : "/items/active/sbqController/cockVore.png" },
+					{ "type" : "iconButton", "visible" : false, "id" : "breastVore", "toolTip" : "Засунь меня в свои сиськи!", "image" : "/items/active/sbqController/breastVore.png" },
+					{ "type" : "iconButton", "visible" : false, "id" : "unbirth", "toolTip" : "Засунь меня в свою киску!", "image" : "/items/active/sbqController/unbirth.png" },
+
+					{ "type" : "iconButton", "visible" : false, "id" : "bellyInfusion", "toolTip" : "Преврати меня в свой живот!", "image" : "/items/active/sbqController/bellyInfusion.png" },
+					{ "type" : "iconButton", "visible" : false, "id" : "breastsInfusion", "toolTip" : "Преврати меня в свою грудь!", "image" : "/items/active/sbqController/breastsInfusion.png" },
+					{ "type" : "iconButton", "visible" : false, "id" : "pussyInfusion", "toolTip" : "Преврати меня в свою киску!", "image" : "/items/active/sbqController/pussyInfusion.png" },
+					{ "type" : "iconButton", "visible" : false, "id" : "cockInfusion", "toolTip" : "Преврати меня в свой член!", "image" : "/items/active/sbqController/cockInfusion.png" },
+					{ "type" : "iconButton", "visible" : false, "id" : "ballsInfusion", "toolTip" : "Преврати меня в свои яйца!", "image" : "/items/active/sbqController/ballsInfusion.png" },
+					{ "type" : "iconButton", "visible" : false, "id" : "shaftBallsInfusion", "toolTip" : "Преврати меня в свой член и яйца!", "image" : "/items/active/sbqController/shaftBallsInfusion.png" },
+
+					{ "type" : "iconButton", "visible" : false, "id" : "changeBack", "toolTip" : "Измени меня обратно!", "image" : "/items/active/sbqController/letout.png" },
+					{ "type" : "iconButton", "visible" : false, "id" : "letOut", "toolTip" : "Выпусти меня!", "image" : "/items/active/sbqController/letout.png" }
+				]
+			]}
+		]}
+	]
+}

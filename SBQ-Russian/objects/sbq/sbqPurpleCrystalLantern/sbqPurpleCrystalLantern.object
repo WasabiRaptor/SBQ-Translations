@@ -1,0 +1,154 @@
+{
+	"objectName" : "sbqPurpleCrystalLantern",
+	"colonyTags" : ["light","drimyr"],
+	"rarity" : "Common",
+	"category" : "light",
+	"printable" : true,
+	"price" : 85,
+
+	"description" : "Кристалл в этом богато украшенном фонаре мягко пульсирует.",
+	"shortdescription" : "Фиолетовый хрустальный фонарь",
+	"race" : "generic",
+
+
+	"apexDescription" : "Кристалл, по-видимому, генерирует свет.",
+	"avianDescription" : "В некоторых фонарях, где требуется более постоянный свет, вместо огня используются кристаллы. Они служат многие тысячи лет.",
+	"floranDescription" : "Жуткое свечение.",
+	"glitchDescription" : "Заинтригован. Этот кристалл, похоже, производит собственный свет.",
+	"humanDescription" : "Кристалл светится, но на ощупь совершенно холодный.",
+	"hylotlDescription" : "Такая красивая технология. Как они научились ее использовать?",
+	"novakidDescription" : "Этот блестящий камень светится, как пламя.",
+
+	"lightColor" : [235, 200, 255],
+
+	"inventoryIcon" : "sbqPurpleCrystalLantern.png:combined.floor?crop=0;0;16;16",
+	"orientations" : [
+		{
+			"image" : "sbqPurpleCrystalLantern.png:combined.floor",
+			"imagePosition" : [-8, 0],
+
+			"direction" : "left",
+			"flipImages" : true,
+
+			"animationParts" : {
+				"housing" : "floor"
+			},
+			"animationPosition" : [-8, 0],
+
+			"spaces" : [ [-1, 0], [-1, 1], [0, 0], [0, 1] ],
+			"fgAnchors" : [ [-1, -1], [0, -1] ]
+		},
+		{
+			"image" : "sbqPurpleCrystalLantern.png:combined.floor",
+			"imagePosition" : [-8, 0],
+
+			"direction" : "right",
+
+			"animationParts" : {
+				"housing" : "floor"
+			},
+			"animationPosition" : [-8, 0],
+
+			"spaces" : [ [-1, 0], [-1, 1], [0, 0], [0, 1] ],
+			"fgAnchors" : [ [-1, -1], [0, -1] ]
+		},
+		{
+			"image" : "sbqPurpleCrystalLantern.png:combined.across",
+			"imagePosition" : [-8, 0],
+
+			"direction" : "left",
+			"flipImages" : true,
+
+			"animationParts" : {
+				"housing" : "across"
+			},
+			"animationPosition" : [-8, 0],
+
+			"spaces" : [ [-1, 0], [-1, 1], [-1, 2], [0, 0], [0, 1], [0, 2] ],
+			"fgAnchors" : [ [-2, 2], [1, 2] ]
+		},
+		{
+			"image" : "sbqPurpleCrystalLantern.png:combined.across",
+			"imagePosition" : [-8, 0],
+
+			"direction" : "right",
+
+			"animationParts" : {
+				"housing" : "across"
+			},
+			"animationPosition" : [-8, 0],
+
+			"spaces" : [ [-1, 0], [-1, 1], [-1, 2], [0, 0], [0, 1], [0, 2] ],
+			"fgAnchors" : [ [-2, 2], [1, 2] ]
+		},
+		{
+			"image" : "sbqPurpleCrystalLantern.png:combined.wall",
+			"imagePosition" : [-8, 0],
+
+			"direction" : "right",
+
+			"animationParts" : {
+				"housing" : "wall"
+			},
+			"animationPosition" : [-8, 0],
+
+			"spaces" : [ [-1, 0], [-1, 1], [-1, 2], [0, 0], [0, 1], [0, 2] ],
+			"fgAnchors" : [ [-2, 2] ]
+		},
+
+		{
+			"image" : "sbqPurpleCrystalLantern.png:combined.wall",
+			"imagePosition" : [-8, 0],
+
+			"direction" : "left",
+			"flipImages" : true,
+
+			"animationParts" : {
+				"housing" : "wall"
+			},
+			"animationPosition" : [-8, 0],
+
+			"spaces" : [ [-1, 0], [-1, 1], [-1, 2], [0, 0], [0, 1], [0, 2] ],
+			"fgAnchors" : [ [1, 2] ]
+		},
+		{
+			"image" : "sbqPurpleCrystalLantern.png:combined.top",
+			"imagePosition" : [-8, 0],
+
+			"direction" : "left",
+			"flipImages" : true,
+
+			"animationParts" : {
+				"housing" : "top"
+			},
+			"animationPosition" : [-8, 0],
+
+			"spaces" : [ [-1, 0], [-1, 1], [-1, 2], [0, 0], [0, 1], [0, 2] ],
+			"fgAnchors" : [ [-1, 3], [0, 3] ]
+		},
+		{
+			"image" : "sbqPurpleCrystalLantern.png:combined.top",
+			"imagePosition" : [-8, 0],
+
+			"direction" : "right",
+
+			"animationParts" : {
+				"housing" : "top"
+			},
+			"animationPosition" : [-8, 0],
+
+			"spaces" : [ [-1, 0], [-1, 1], [-1, 2], [0, 0], [0, 1], [0, 2] ],
+			"fgAnchors" : [ [-1, 3], [0, 3] ]
+		}
+	],
+
+	"animation" : "sbqPurpleCrystalLantern.animation",
+	"animationParts" : {
+		"housing" : "floor"
+	},
+
+	"scripts" : [ "/objects/wired/light/light.lua" ],
+	"scriptDelta" : 60,
+
+	"inputNodes" : [ [0, 0] ]
+}

@@ -1,0 +1,13 @@
+{
+	"itemName" : "sbq_nude_back",
+	"price" : 0,
+	"inventoryIcon" : "/interface/scripted/sbq/backSlot.png",
+	"rarity" : "Common",
+	"category" : "backwear",
+	"description" : "",
+	"shortdescription" : "Скрыть обратно",
+	"tooltipKind" : "back",
+	"maleFrames" : "back.png",
+	"femaleFrames" : "back.png",
+	"maxStack" : 1
+}

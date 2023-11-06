@@ -1,0 +1,30 @@
+{
+	"itemName" : "sbqCoreZoroark",
+	"price" : 1000,
+	"rarity" : "Rare",
+	"category" : "Pred Core",
+	"itemTags": ["reagent"],
+
+	"tooltipKind" : "sbqSpawner",
+
+	"inventoryIcon": "/vehicles/sbq/sbqZoroark/skins/default/icon.png",
+	"shortdescription": "Зороарк",
+	"description" : "Большой зороарк для себя! Используй на пустом спавнере, чтобы поместить его внутрь.",
+
+	"tooltipFields" : {
+		"statusLabel": "Большой зороарк для себя! Используй на пустом спавнере, чтобы поместить его внутрь."
+	},
+
+	"augment" : {
+	  "type" : "sbqCore"
+	},
+
+	"vehicle": {
+		"type": "sbqZoroark",
+		"position": [0, 4]	// in blocks
+	},
+
+	"scripts" : [ "/items/sbq/predCore/sbqCore.lua" ]
+	//"builder" : "/objects/sbq/sbqSpawners/sbqItemBuilder.lua"
+
+  }

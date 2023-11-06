@@ -1,0 +1,30 @@
+{
+	"itemName" : "sbqCoreXeronious",
+	"price" : 1000,
+	"rarity" : "Rare",
+	"category" : "Pred Core",
+	"itemTags": ["reagent"],
+
+	"tooltipKind" : "sbqSpawner",
+
+	"inventoryIcon": "/vehicles/sbq/sbqXeronious/skins/default/icon.png",
+	"shortdescription": "Кайдзю",
+	"description" : "Пушистый кайдзю собственной персоной! Используй на пустом спавнере, чтобы поместить его внутрь.",
+
+	"tooltipFields" : {
+		"statusLabel": "Пушистый кайдзю собственной персоной! Используй на пустом спавнере, чтобы поместить его внутрь."
+	},
+
+	"augment" : {
+	  "type" : "sbqCore"
+	},
+
+	"vehicle": {
+		"type": "sbqXeronious",
+		"position": [0, 5]	// in blocks
+	},
+
+	"scripts" : [ "/items/sbq/predCore/sbqCore.lua" ]
+	//"builder" : "/objects/sbq/sbqSpawners/sbqItemBuilder.lua"
+
+  }

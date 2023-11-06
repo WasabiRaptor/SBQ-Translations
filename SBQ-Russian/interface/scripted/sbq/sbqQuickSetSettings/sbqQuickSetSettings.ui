@@ -1,0 +1,174 @@
+{ //  -*- grammar-ext: json -*-
+	"style" : "panel", // window (has titlebar), panel (just a frame) etc.
+	"size" : [300, 300], // *internal* size (not including chrome)
+	"title" : "Starbecue Quick Settings",
+	"icon" : "/items/active/sbqController/oralVore.png",
+	"uniqueBy" : "path",
+	"scripts" : [ "/interface/scripted/sbq/sbqQuickSetSettings/sbqQuickSetSettings.lua" ],
+	"children" : [
+		{ "type" : "scrollArea", "children" : [
+			{"type":"canvas", "id":"titleCanvas", "size":[270,25]},
+			{"type":"panel","style":"convex","expandMode":[1,0],"children":[
+				{"type":"label", "align":"center", "text":"Starbecue - это кинк и фетиш мод 18+, сфокусированный на vore и TF\nЛюбая демонстрация контента в этом моде должна быть ограничена по возрасту соответственно\n \nТут есть много переключателей для обеспечения надлежащего согласия на то, что кинки могут быть сделаны с игроками и NPC, вот наиболее важные из них \n*Переведено группой: Переводы низшего сорта 18+*"},
+				[
+					{"type":"button", "id":"allKinks", "color":"008800", "caption":"Выдать мне ВСЕ фетиши!", "toolTip":"Enable everything, pred, prey, dom, sub, whatever, every option will be enabled."},
+					{"type":"button", "id":"noneKinks", "color":"880000", "caption":"Я бы не хотел.", "toolTip":"Все настройки, связанные с SBQ, будут отключены."}
+				]
+			]},
+			{"type":"panel","style":"convex","expandMode":[1,0],"children":[
+				{"mode":"v"},
+				{"type":"label", "align":"center", "text":"Предпочтения хищников"},
+				[
+					{"type":"button", "id":"allPred", "color":"008800", "caption":"Universal Pred", "toolTip":"Включить все опции Хищника."},
+					{"type":"button", "id":"nonePred", "color":"880000", "caption":"Не хищник", "toolTip":"Отключить все опции Хищника."}
+				],
+				{"type":"panel","style":"flat","expandMode":[1,0],"children":[
+					{"mode":"v", "spacing":-1},
+					[[{"mode":"h"},{ "type" : "checkBox", "id" : "oralVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "oralVorePredUnwilling", "toolTip" : "Дает возможность жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Рот Vore" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "tailVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "tailVorePredUnwilling", "toolTip" : "Дает возможность жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Хвост Vore" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "absorbVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "absorbVorePredUnwilling", "toolTip" : "Дает возможность жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Поглощение" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "navelVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "navelVorePredUnwilling", "toolTip" : "Дает возможность жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Пупок Vore" } ]],
+					[[{"mode":"h"},{ "type" : "checkBox", "id" : "analVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "analVorePredUnwilling", "toolTip" : "Дает возможность жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Анальный Vore" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "cockVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "cockVorePredUnwilling", "toolTip" : "Дает возможность жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Член Vore" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "unbirthPred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "unbirthPredUnwilling", "toolTip" : "Дает возможность жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Матка" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "breastVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "breastVorePredUnwilling", "toolTip" : "Дает возможность жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Грудь Vore" } ]],
+					{"type" : "spacer", "size" : 3},
+					{"type" : "label", "text" : "-Body Part TF-", "align" : "center"},
+					{"type" : "spacer", "size" : 3},
+					[[{"mode":"h"},{ "type" : "checkBox", "id" : "bellyInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "bellyInfusionPredUnwilling", "toolTip" : "Дает возможность жертве самостоятельно TF без спроса." }, { "type" : "label", "text" : " Живот TF" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "cockInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "cockInfusionPredUnwilling", "toolTip" : "Дает возможность жертве самостоятельно TF без спроса." }, { "type" : "label", "text" : " Член TF" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "pussyInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "pussyInfusionPredUnwilling", "toolTip" : "Дает возможность жертве самостоятельно TF без спроса." }, { "type" : "label", "text" : " Киска TF" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "breastsInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "breastsInfusionPredUnwilling", "toolTip" : "Дает возможность жертве самостоятельно TF без спроса." }, { "type" : "label", "text" : " Грудь TF" } ]]
+				]},
+				{"type":"panel","style":"flat","expandMode":[1,0],"children":[
+					{"mode":"v", "spacing":-1},
+					[
+						[{"mode":"h"},{ "type" : "checkBox", "id" : "displayDigest", "toolTip" : "Эффекты, применяемые к добыче, могут испускать частицы, основанные на эффекте" }, { "type" : "label", "text" : " Эффект отображения" } ],
+						[{"mode":"h"},{ "type" : "checkBox", "id" : "forcefulPrey", "toolTip" : "Позволяет добыче проникать внутрь без запроса\n (если этот тип vore включен и доступен)." }, { "type" : "label", "text" : " Сила добычи" } ]
+					]
+				]},
+				{"type":"label", "align":"center", "text":"Default Location Preferences"},
+				{"type":"panel","style":"flat","expandMode":[1,0],"children":[
+					{"mode":"v", "spacing":-1},
+					[[{"mode":"h"},{ "type" : "checkBox", "id" : "defaultHammerspace", "toolTip" : "По умолчанию локации будут игнорировать ограничение по размеру." }, { "type" : "label", "text" : " Hammerspace" } ],
+						[
+							{"mode":"h"},
+							{ "type" : "checkBox", "radioGroup" : "Compression", "value" : "time", "id" : "defaultTimeCompression",  "toolTip" : "С течением времени добыча сжимается до меньших размеров." },
+							{ "type" : "checkBox", "radioGroup" : "Compression", "value" : "health", "id" : "defaultHealthCompression",  "toolTip" : "Добыча сжимается до меньшего размера в зависимости от ее здоровья." },
+							{ "type" : "checkBox", "radioGroup" : "Compression", "value" : false, "id" : "defaultNoneCompression",  "toolTip" : "Добыча не будет сжиматься.", "visible" : false },
+
+							{ "type" : "textBox", "id" : "defaultCompressionMultiplier", "size" : [30,14], "expandMode" : [0,0], "expand" : false,  "toolTip" : "Минимальный множитель по умолчанию, который может применяться при сжатии." },
+							{ "type" : "label", "text" : " Компрессия" }
+						]
+					],
+					[[{"mode":"h"},{ "type" : "checkBox", "id" : "defaultSounds", "toolTip" : "По умолчанию издает булькающие звуки при появлении добычи." }, { "type" : "label", "text" : " Булькающие звуки" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "defaultStruggleSounds", "toolTip" : "По умолчанию издает звуки при борьбе с добычей." }, { "type" : "label", "text" : " Звуки борьбы" } ]],
+					[
+						[
+							{"mode":"h"},{ "type" : "checkBox", "id" : "defaultPredDigestDrops", "toolTip" : "По умолчанию добыча может сбросить предмет при переваривании." }, { "type" : "label", "text" : " Капли пищеварения" }
+						],
+						[
+							{"mode":"h"},
+							{ "type" : "checkBox", "id" : "defaultInfusedVisual", "toolTip" : "По умолчанию детали могут менять цвет в соответствии с введенным символом." },
+							{ "type" : "checkBox", "id" : "defaultInfusedSize", "toolTip" : "По умолчанию добавляется размер персонажа, если это применимо." },
+							{ "type" : "checkBox", "id" : "defaultInfusedSizeAdditive", "toolTip" : "При добавлении размера персонажа сделать так, чтобы он по умолчанию учитывался при определении уровня заполнения." },
+							{ "type" : "textBox", "id" : "defaultInfusedMultiplier", "size" : [30,14], "expandMode" : [0,0], "toolTip" : "Множитель размера по умолчанию для вливаемых символов, если размер добавляется." },
+							{ "type" : "label", "text" : " Инфузия" }
+						]
+					],
+					[
+						[
+							{"mode":"h"},
+							{ "type" : "checkBox", "id" : "defaultAbsorbPlayers", "toolTip" : "Всасывание игроков при переваривании пищи." },
+							{ "type" : "checkBox", "id" : "defaultAbsorbOCs", "toolTip" : "Поглощают Осц при переваривании пищи." },
+							{ "type" : "checkBox", "id" : "defaultAbsorbSBQNPCs", "toolTip" : "Поглощение НПС SBQ при переваривании." },
+							{ "type" : "checkBox", "id" : "defaultAbsorbOthers", "toolTip" : "Поглощение любых других NPC при переваривании." },
+							{"type" : "label", "text" : " Поглощение добычи"}
+						],
+						[
+							{"mode":"h"}
+						]
+					]
+				]}
+			]},
+			{"type":"panel","style":"convex","expandMode":[1,0],"children":[
+				{"mode":"v"},
+				{"type":"label", "align":"center", "text":"Предпочтение добычи"},
+				[
+					{"type":"button", "id":"allPrey", "color":"008800", "caption":"Универсальная добыча", "toolTip":"Включить все опции добычи."},
+					{"type":"button", "id":"nonePrey", "color":"880000", "caption":"Не добыча", "toolTip":"включить все опции добычи."}
+				],
+				{"type":"panel","style":"flat","expandMode":[1,0],"children":[
+					{"mode":"v", "spacing":-1},
+					[[{"mode":"h"},{ "type" : "checkBox", "id" : "oralVore" }, { "type" : "label", "text" : " Рот Vore" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "tailVore" }, { "type" : "label", "text" : " Хост Vore" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "absorbVore" }, { "type" : "label", "text" : " Поглощение" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "navelVore" }, { "type" : "label", "text" : " Пупок Vore" } ]],
+					[[{"mode":"h"},{ "type" : "checkBox", "id" : "analVore" }, { "type" : "label", "text" : " Анальный Vore" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "cockVore" }, { "type" : "label", "text" : " Член Vore" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "breastVore" }, { "type" : "label", "text" : " Грудь Vore" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "unbirth" }, { "type" : "label", "text" : " Матка" } ]],
+					{"type" : "spacer", "size" : 3},
+					{"type" : "label", "text" : "-Body Part TF-", "align" : "center"},
+					{"type" : "spacer", "size" : 3},
+					[[{"mode":"h"},{ "type" : "checkBox", "id" : "bellyInfusion" }, { "type" : "label", "text" : " Живот TF" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "cockInfusion" }, { "type" : "label", "text" : " Член TF" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "pussyInfusion" }, { "type" : "label", "text" : " Киска TF" } ],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "breastsInfusion" }, { "type" : "label", "text" : " Грудь TF" } ]]
+				]},
+				{"type":"label", "align":"center", "text":"Digestion Preferences"},
+				[
+					{"type":"button", "id":"allDigestPrey", "color":"008800", "caption":"Универсальное пищеварение", "toolTip":"Включить все виды пищеварения."},
+					{"type":"button", "id":"noneDigestPrey", "color":"880000", "caption":"Отсутствие пищеварения", "toolTip":"Отключение всех видов пищеварения."}
+				],
+				{"type":"panel","style":"flat","expandMode":[1,0],"children":[
+					{"mode":"v", "spacing":-1},
+					[[{"mode":"h"},{ "type" : "checkBox", "id" : "digestAllow", "toolTip" : "Разрешить пищеварение." },{ "type" : "checkBox", "id" : "softDigestAllow", "toolTip" : "Обеспечивают мягкое пищеварение." }, { "type" : "checkBox", "id" : "digestItemDropsAllow", "toolTip" : "При переваривании выделяют специальные капли." }, { "type" : "label", "text" : " Пищеварение" }],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "cumDigestAllow", "toolTip" : "Разрешить переваривание в кончу." }, { "type" : "checkBox", "id" : "cumSoftDigestAllow", "toolTip" : "Обеспечивают мягкое переваривание кончи." }, { "type" : "checkBox", "id" : "cumDigestItemDropsAllow", "toolTip" : "Допускаются специальные капли при переваривании в кончу." }, { "type" : "label", "text" : " Переваривание спермы" }]],
+					[[{"mode":"h"},{ "type" : "checkBox", "id" : "femcumDigestAllow", "toolTip" : "Разрешить переваривание в женскую кончу." },{ "type" : "checkBox", "id" : "femcumSoftDigestAllow", "toolTip" : "Обеспечить мягкое пищеварение в женскую кончу." }, { "type" : "checkBox", "id" : "femcumDigestItemDropsAllow", "toolTip" : "При переваривании в женскую кончу разрешается принимать специальные капли." }, { "type" : "label", "text" : "Переваривание в женскую кончу" }],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "milkDigestAllow", "toolTip" : "Разрешить переваривание молока." }, { "type" : "checkBox", "id" : "milkSoftDigestAllow", "toolTip" : "Обеспечивают мягкое переваривание молока." }, { "type" : "checkBox", "id" : "milkDigestItemDropsAllow", "toolTip" : "При переваривании молока разрешается использовать специальные капли." }, { "type" : "label", "text" : " Переваривание молока" }]]
+				]}
+			]},
+			{"type":"panel","style":"convex","expandMode":[1,0],"children":[
+				{"mode":"v"},
+				{"type":"label", "align":"center", "text":"Transformation Preferences"},
+				[
+					{"type":"button", "id":"allTtransform", "color":"008800", "caption":"Универсальная трансформация", "toolTip":"Включить все преобразования."},
+					{"type":"button", "id":"noneTtransform", "color":"880000", "caption":"Отсутствие трансформации", "toolTip":"Отключить все преобразования."}
+				],
+				{"type":"panel","style":"flat","expandMode":[1,0],"children":[
+					{"mode":"v", "spacing":-1},
+					[[{"mode":"h"},{ "type" : "checkBox", "id" : "transformAllow", "toolTip" : "Разрешить эффекты трансформации." }, { "type" : "label", "text" : " Трансформация" }],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "cumTransformAllow", "toolTip" : "Разрешить преобразование в кончу." }, { "type" : "label", "text" : " Трансформация в кончу" }]],
+					[[{"mode":"h"},{ "type" : "checkBox", "id" : "genderswapAllow", "toolTip" : "Разрешить эффекты смены пола." }, { "type" : "label", "text" : " Смена пола" }],
+					[{"mode":"h"},{ "type" : "checkBox", "id" : "eggAllow", "toolTip" : "Разрешить попадание в яйцо." }, { "type" : "label", "text" : " Яичная ловушка" }]]
+				]}
+			]},
+			[
+				{ "expandMode":[1,0], "size" : [270,25] },
+				{ "type" : "panel", "id" : "sizePanel", "expandMode" : [1,1], "style" : "convex", "children" : [
+					{"mode": "vertical", "spacing" : 0},
+					{ "type" : "label", "text" : "Size Control", "align" : "center" },
+					[
+							{ "type" : "slider", "id" : "scaleValue", "notches": [0.1, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 2, 3], "handles": [{"value": 0.1, "toolTip": "Minimum Scale"}, {"value": 1, "toolTip": "Current Scale"}, {"value": 3, "toolTip": "Maximum Scale"}]}
+					]
+				]},
+				{ "type" : "panel", "id" : "performanceSettingsPanel", "expandMode" : [1,1], "style" : "convex", "children" : [
+					{"mode": "vertical", "spacing" : 0},
+					{ "type" : "label", "text" : "Performance Settings", "align" : "center" },
+					[
+						{ "type" : "checkBox", "id" : "noSpriteRedraw", "toolTip" : "Полностью отключить перерисовку спрайтов, что означает отсутствие графики vore, TF или TG, а также отсутствие масштабирования по размеру." },
+						{ "type" : "checkBox", "id" : "noHandItems", "toolTip" : "Отключить все ручные элементы." },
+						{ "type" : "checkBox", "id" : "noAnimatedItems", "toolTip" : "Отключить анимированные элементы руки, простые элементы без анимации будут отображаться, анимированные - в виде пустой руки." },
+						{ "type" : "checkBox", "id" : "noAnimatingItems", "toolTip" : "Отключить анимацию элементов рук, простые элементы без анимации будут отображаться, анимированные останутся на первом кадре." }
+					]
+				]}
+			],
+			{"type":"panel","style":"convex","expandMode":[1,0],"children":[
+				{"type":"label", "align":"center", "text":"Эта панель появляется только при создании нового персонажа, или если новые настройки были добавлены или изменены между версиями.\n \nЭто меню содержит только самые основные переключатели, основная панель настроек может быть доступна с панели быстрого доступа."},
+				{"type":"button", "id":"mainSettings", "caption":"Установки Starbecue"},
+				{"type":"button", "id":"close", "caption":"Я закончил"}
+			]}
+		]}
+	]
+}

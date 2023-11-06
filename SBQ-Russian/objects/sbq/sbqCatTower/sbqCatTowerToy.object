@@ -1,0 +1,57 @@
+{
+  "objectName" : "sbqCatTowerToy",
+  "rarity" : "Common",
+  "description" : "Болтающиеся предметы - злейший враг кошки!",
+  "shortdescription" : "Игрушка-башня для кошек",
+  "race" : "generic",
+  "category" : "furniture",
+  "price" : 85,
+  "printable" : false,
+
+ "apexDescription" : "Это кресло выглядит красивым и удобным... хотя и немного большим.",
+  "avianDescription" : "Красочный и удобный... и большой",
+  "floranDescription" : "Большое мягкое кресло с гладкими деревянными подлокотниками.",
+  "glitchDescription" : "Содержание. В этом огромном кресле я мог бы с удовольствием провести несколько часов.",
+  "humanDescription" : "Большое деревянное кресло.",
+  "hylotlDescription" : "Удобно... не уверен насчет скромности.",
+  "novakidDescription" : "Эти вещи сводят с ума этих тварей.",
+
+  "inventoryIcon" : "sbqCatTowerIcon.png",
+  "orientations" : [
+    {
+      "image" : "sbqCatTowerToy.png:default",
+      "imagePosition" : [-10, 0],
+      "animationPosition" : [-10, 0],
+      "direction" : "left",
+      "flipImages" : false,
+
+      "spaces" : [ [0, 0], [0, 1] ]
+    },
+    {
+      "image" : "sbqCatTowerToy.png:default",
+      "imagePosition" : [-7, 0],
+      "animationPosition" : [-7, 0],
+      "direction" : "right",
+      "flipImages" : false,
+
+      "spaces" : [ [0, 0], [0, 1] ]
+    }
+  ],
+
+  "objectType" : "object",
+  "scripts": [ "sbqCatTowerToy.lua", "/scripts/npcToyObject.lua" ],
+  "animation": "sbqCatTowerToy.animation",
+  "npcToy": {
+    "influence" : [
+      "wallbutton"
+    ],
+    "defaultReactions" : {
+      "wallbutton" : [
+        [1.0, "smile"],
+        [1.0, "laugh"]
+      ]
+    },
+    "maxNpcs" : 1,
+    "randomStandXRange" : [-3, 3]
+  }
+}
