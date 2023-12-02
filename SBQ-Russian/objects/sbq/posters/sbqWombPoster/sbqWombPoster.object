@@ -1,0 +1,33 @@
+{
+  //ArgobargSoup
+  "objectName" : "sbqWombPoster",
+  "colonyTags" : ["uvore", "horny", "womb", "wombPoster"],
+  "rarity" : "Common",
+  "category" : "decorative",
+  "price" : 100,
+
+  "description" : "Можно согласиться с тем, что.",
+  "shortdescription" : "Плакат о матке",
+  "race" : "generic",
+
+  "apexDescription" : "Довольно... интересное заявление.",
+  "avianDescription" : "Звездочеты, конечно, этого не одобрили бы... однако...",
+  "floranDescription" : "Что если Флоран будет хранить их в желудке?",
+  "glitchDescription" : "Интересует вопрос. Где можно найти модуль 'Матка' для установки?",
+  "humanDescription" : "У кого-то явно есть извращение.",
+  "hylotlDescription" : "Довольно грубое заявление.",
+  "novakidDescription" : "Как бы я их всех туда впихнул(а)?",
+  "avaliDescription" : "Есть ли у меня это вообще...?",
+
+  "inventoryIcon" : "postericon.png",
+  "orientations" : [
+    {
+      "image" : "poster.png",
+      "imagePosition" : [-16, -16],
+      "direction" : "right",
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ]
+    }
+  ]
+}

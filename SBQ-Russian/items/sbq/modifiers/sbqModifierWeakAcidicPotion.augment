@@ -1,0 +1,15 @@
+{
+	"itemName" : "sbqModifierWeakAcidicPotion",
+	"price" : 10,
+	"rarity" : "Uncommon",
+	"category" : "craftingMaterial",
+	"inventoryIcon" : "sbqModifierWeakAcidicPotion.png",
+	"description" : "Слабое кислотное зелье, заставляет живот хищника переваривать своих обитателей... но не настолько, чтобы убить их.",
+	"shortdescription" : "Слабое кислотное зелье",
+	"itemTags" : [ "reagent", "vsopill" ],
+
+	"scripts": ["/items/sbq/modifiers/sbqModifier.lua"],
+	"sbqModifier": {
+		"bellyEffectSlot": "softDigest"
+	}
+}

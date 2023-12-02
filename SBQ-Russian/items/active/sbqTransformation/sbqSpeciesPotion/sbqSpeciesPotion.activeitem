@@ -1,0 +1,28 @@
+
+{
+	"itemName" : "sbqSpeciesPotion",
+	"level" : 1,
+	"price" : 500,
+	"maxStack" : 1,
+	"rarity" : "uncommon",
+	"description" : "Зелье, которое может превратить кого-то в представителя твоего вида, все, что ему нужно, это еще один ингредиент... немного тебя самого.",
+	"shortdescription" : "Видовое зелье",
+	"tooltipKind" : "tool",
+	"category" : "Potion",
+	"twoHanded" : false,
+	"itemTags" : ["sbqTransformation"],
+
+	"inventoryIcon" : "sbqPotion.png",
+	"largeImage" : "sbqPotionLarge.png",
+
+	"animationParts" : {
+		"potion" : "sbqPotion.png"
+	},
+
+	"animation" : "/items/active/sbqTransformation/sbqPotion.animation",
+
+	"scripts" : [
+		"/items/active/sbqTransformation/sbqSpeciesPotion/sbqSpeciesPotion.lua",
+		"/items/active/activeitemOverrides.lua"
+	]
+}

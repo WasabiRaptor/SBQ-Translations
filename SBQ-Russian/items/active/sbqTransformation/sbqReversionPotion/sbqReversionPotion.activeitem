@@ -1,0 +1,27 @@
+{
+	"itemName" : "sbqReversionPotion",
+	"level" : 1,
+	"price" : 10,
+	"maxStack" : 999,
+	"rarity" : "common",
+	"description" : "Зелье для возвращения прежней формы...\nЭто просто бутылка молока?",
+	"shortdescription" : "Зелье возвращения",
+	"tooltipKind" : "tool",
+	"category" : "Potion",
+	"twoHanded" : false,
+	"itemTags" : ["sbqTransformation"],
+
+	"inventoryIcon" : "sbqPotion.png",
+	"largeImage" : "sbqPotionLarge.png",
+
+	"animationParts" : {
+		"potion" : "sbqPotion.png"
+	},
+
+	"animation" : "/items/active/sbqTransformation/sbqPotion.animation",
+
+	"scripts" : [
+		"/items/active/sbqTransformation/sbqReversionPotion/sbqReversionPotion.lua",
+		"/items/active/activeitemOverrides.lua"
+	]
+}

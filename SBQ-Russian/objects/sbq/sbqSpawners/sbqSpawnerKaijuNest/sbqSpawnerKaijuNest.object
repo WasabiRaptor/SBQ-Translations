@@ -1,0 +1,57 @@
+{
+	"objectName": "sbqSpawnerKaijuNest",
+	"colonyTags": ["vore"],
+	"rarity": "Uncommon",
+	"race": "generic",
+	"category": "Pred Spawner",
+	"price": 10,
+	"health" : 5,
+	"itemTags": ["sbqSpawner"],
+
+	"tooltipKind" : "sbqSpawner",
+
+	"inventoryIcon": "sbqSpawnerKaijuNestIcon.png",
+	"shortdescription": "Гнездо кайдзю",
+	"description": "Собрание выпавших перьев и пуха в виде гнезда.",
+
+	"tooltipFields" : {
+		"statusLabel": "Собрание выпавших перьев и пуха в виде гнезда."
+	},
+
+	"orientations": [
+		{
+			"imageLayers" : [ { "image" : "sbqSpawnerKaijuNest.png" } ],
+			"imagePosition": [-42, 0],
+			"direction": "left",
+			"flipImages": true,
+			"anchors": ["bottom"],
+			"spaces" : [ [-4,0], [-3,0], [-2,0], [0,0], [1,0], [2,0], [3,0], [4,0] ],
+			"collision" : "solid"
+		},
+		{
+			"imageLayers" : [ { "image" : "sbqSpawnerKaijuNest.png" } ],
+			"imagePosition": [-46, 0],
+			"direction": "right",
+			"anchors": ["bottom"],
+			"spaces" : [ [-4,0], [-3,0], [-2,0], [0,0], [1,0], [2,0], [3,0], [4,0] ],
+			"collision" : "solid"
+		}
+	],
+	"spawnOffset" : [0, 1],
+
+	"acceptsAugmentType" : "sbqCore",
+
+	"retainObjectParametersInItem" : true,
+	"isWired" : false,
+	"printable" : false,
+	"scannable" : false,
+	"interactive" : false,
+	"inspectable" : false,
+	"allowScanning" : false,
+	"isContainer" : false,
+	"builder" : "/objects/sbq/sbqSpawners/sbqItemBuilder.lua",
+	"scripts": [
+		"/objects/sbq/sbqSpawners/sbqSpawner.lua",
+		"sbqSpawnerKaijuNest.lua"
+	]
+}

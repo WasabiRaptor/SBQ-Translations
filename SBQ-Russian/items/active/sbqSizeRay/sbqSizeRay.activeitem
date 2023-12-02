@@ -1,0 +1,144 @@
+{
+	"itemName" : "sbqSizeRay",
+	"price" : 1500,
+	"maxStack" : 1,
+	"rarity" : "Legendary",
+	"description" : "Лучевая пушка для изменения размеров людей.\n \n^green;Удерживайте shift, чтобы нацелиться на себя.\n \n^reset;primary: ^cyan;shrink\n^reset;alt: ^orange;growth",
+	"shortdescription" : "Размерный луч",
+	"tooltipKind" : "base",
+	"category" : "uniqueWeapon",
+	"twoHanded" : true,
+	"itemTags" : ["weapon","ranged"],
+
+	"inventoryIcon" : "sbqSizeRay.png:empty",
+
+	"animation" : "sbqSizeRay.animation",
+	"animationParts" : {
+		"gun" : "sbqSizeRay.png",
+		"gunfullbright" : "sbqSizeRayFullbright.png"
+	},
+	"animationCustom" : {},
+	"muzzleOffset" : [2.5, 0.5],
+
+	"scripts" : [
+		"/items/active/weapons/ranged/gun.lua",
+		"/items/active/sbqSizeRay/sbqSizeRay.lua",
+		"/items/active/activeitemOverrides.lua"
+	],
+
+	"primaryAbilityType" : "chargefire",
+	"primaryAbility" : {
+		"scripts" : ["/items/active/weapons/ranged/abilities/chargefire/chargefire.lua", "/items/active/sbqSizeRay/sbqSizeRayChargeFire.lua"],
+		"chargeLevels" : [
+			{
+				"time" : 0,
+				"energyCost" : 5,
+				"cooldown" : 0.25,
+				"projectileType" : "sbqSizeZapShrink",
+				"projectileParameters" : {"animOverrideScale" : 1},
+				"inaccuracy" : 0.008,
+				"baseDamage" : 0,
+				"fireSound" : "fire"
+			},
+			{
+				"time" : 1,
+				"energyCost" : 5,
+				"cooldown" : 0.25,
+				"projectileType" : "sbqSizeZapShrink",
+				"projectileParameters" : {"animOverrideScale" : 0.75},
+				"inaccuracy" : 0.008,
+				"baseDamage" : 0,
+				"fireSound" : "fire"
+			},
+			{
+				"time" : 2,
+				"energyCost" : 40,
+				"cooldown" : 0.25,
+				"projectileType" : "sbqSizeZapShrink",
+				"projectileParameters" : {"animOverrideScale" : 0.5},
+				"inaccuracy" : 0,
+				"baseDamage" : 0,
+				"fireSound" : "fire2"
+			},
+			{
+				"time" : 3,
+				"energyCost" : 40,
+				"cooldown" : 0.25,
+				"projectileType" : "sbqSizeZapShrink",
+				"projectileParameters" : {"animOverrideScale" : 0.25},
+				"inaccuracy" : 0,
+				"baseDamage" : 0,
+				"fireSound" : "fire2"
+			},
+			{
+				"time" : 5,
+				"energyCost" : 40,
+				"cooldown" : 0.25,
+				"projectileType" : "sbqSizeZapShrink",
+				"projectileParameters" : {"animOverrideScale" : 0.1},
+				"inaccuracy" : 0,
+				"baseDamage" : 0,
+				"fireSound" : "fire2"
+			}
+		]
+	},
+	"altAbilityType" : "chargefire",
+	"altAbility" : {
+		"scripts" : ["/items/active/weapons/ranged/abilities/chargefire/chargefire.lua", "/items/active/sbqSizeRay/sbqSizeRayChargeFire.lua"],
+		"chargeLevels" : [
+			{
+				"time" : 0,
+				"energyCost" : 5,
+				"cooldown" : 0.25,
+				"projectileType" : "sbqSizeZapGrow",
+				"projectileParameters" : {"animOverrideScale" : 1},
+				"inaccuracy" : 0.008,
+				"baseDamage" : 0,
+				"fireSound" : "fire"
+			},
+			{
+				"time" : 1,
+				"energyCost" : 5,
+				"cooldown" : 0.25,
+				"projectileType" : "sbqSizeZapGrow",
+				"projectileParameters" : {"animOverrideScale" : 1.25},
+				"inaccuracy" : 0.008,
+				"baseDamage" : 0,
+				"fireSound" : "fire"
+			},
+			{
+				"time" : 2,
+				"energyCost" : 40,
+				"cooldown" : 0.25,
+				"projectileType" : "sbqSizeZapGrow",
+				"projectileParameters" : {"animOverrideScale" : 1.5},
+				"inaccuracy" : 0,
+				"baseDamage" : 0,
+				"fireSound" : "fire2"
+			},
+			{
+				"time" : 3,
+				"energyCost" : 40,
+				"cooldown" : 0.25,
+				"projectileType" : "sbqSizeZapGrow",
+				"projectileParameters" : {"animOverrideScale" : 2},
+				"inaccuracy" : 0,
+				"baseDamage" : 0,
+				"fireSound" : "fire2"
+			},
+			{
+				"time" : 5,
+				"energyCost" : 40,
+				"cooldown" : 0.25,
+				"projectileType" : "sbqSizeZapGrow",
+				"projectileParameters" : {"animOverrideScale" : 3},
+				"inaccuracy" : 0,
+				"baseDamage" : 0,
+				"fireSound" : "fire2"
+			}
+		]
+	},
+
+
+	"builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

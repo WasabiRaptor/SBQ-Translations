@@ -1,0 +1,206 @@
+{ //  -*- grammar-ext: json -*-
+	"style" : "window", // window (has titlebar), panel (just a frame) etc.
+	"size" : [256, 256], // *internal* size (not including chrome)
+	"title" : "SBQ Colony Deed",
+	"icon" : "/objects/sbq/sbqVoreColonyDeed/sbqVoreColonyDeedIcon.png",
+	"uniqueBy" : "path",
+	"scripts" : [ "sbqVoreColonyDeed.lua" ],
+	"children" : [
+		{ "type" : "tabField", "id" : "mainTabField", "layout" : "horizontal", "tabs" : [
+			{ "type" : "tab", "id" : "deedTab", "title" : "", "icon" : "/objects/sbq/sbqVoreColonyDeed/sbqVoreColonyDeedIcon.png", "color" : "ff00ff", "contents" : [
+				{ "type" : "panel", "id" : "tenantPanel", "expandMode" : [1, 0], "style" : "convex", "children" : [
+					{ "mode" : "h" },
+					{ "type" : "label", "text" : " Tenant", "inline" : true },
+					{ "type" : "iconButton", "id" : "decTenant", "image" : "/interface/pickleft.png", "hoverImage" : "/interface/pickleftover.png" },
+					{ "type" : "textBox", "id" : "tenantText", "expandMode" : [1, 0] },
+					{ "type" : "iconButton", "id" : "incTenant", "image" : "/interface/pickright.png", "hoverImage" : "/interface/pickrightover.png" },
+					{ "type" : "button", "id" : "summonTenant", "caption" : "Summon", "expandMode" : [0, 0], "toolTip" : "Внимание! Вызов нового NPC очистит сохраненные данные о текущем жильце! Для подтверждения выселения существующего жильца необходимо нажать три раза" }
+				]},
+				{"type" : "layout", "id": "deedSettingsLayout", "expandMode" : [1,0], "size" : [100,140], "mode": "horizontal", "children" : [
+					{"type" : "layout", "mode" : "vertical", "expandMode" : [1,0], "size" : [100,140], "children" : [
+						{ "type" : "button", "id" : "callTenant", "caption" : "Call Tenant", "expandMode" : [2, 0] },
+						{ "type" : "panel", "style" : "convex", "id" : "tenantScrollAreaPanel", "expandMode" : [1,0], "size" : [100, 40], "children" : [
+							{ "type" : "scrollArea", "id" : "tenantListScrollArea", "size" : [100, 30], "expandMode" : [1, 1], "thumbScrolling" : true, "scrollBars" : true, "scrollDirections" : [1, 0], "children" : [ {"mode" : "horizontal"}]}
+						]},
+						{ "type" : "panel", "style" : "convex", "id" : "insertTenantPanel", "expandMode" : [0,0], "children" : [
+							{ "type" : "itemSlot", "id" : "insertTenantItemSlot", "autoInteract" : true },
+							{ "type" : "button", "id" : "insertTenant", "caption" : "Insert NPC" }
+						]},
+						{ "type" : "layout", "mode" : "vertical", "expandMode" : [2,2], "children" : []}
+					]},
+					[
+						{"size" : 90},
+						{ "id" : "requiredTagsPanel", "type" : "panel", "size":[80,50], "expandMode" : [1,1], "style" : "convex", "children" : [
+							{ "type" : "label", "text" : "Colony Tags",  "align" : "center"},
+							[{"type":"button", "id":"tenantNote", "caption":"?", "visible" : false, "size" : [15,15]},{"type":"button", "id":"orderFurniture", "toolTip": "Заказать мебель, которую арендатор может оценить по достоинству.", "caption":"Order Furniture", "visible":false, "expandMode" : [2,0]}],
+							{ "type" : "scrollArea", "id" : "requiredTagsScrollArea", "thumbScrolling" : true, "scrollBars" : true, "scrollDirections" : [0, 1], "children" : []}
+						]}
+					]
+				]}
+			]},
+			{ "type" : "tab", "id" : "tenantTab", "title" : "NPC", "icon" : "/objects/sbq/sbqVoreColonyDeed/sbqVoreColonyDeedIcon.png", "color" : "ff00ff", "contents" : [
+				{"type" : "layout", "id": "globalTenantSettingsLayout", "expandMode" : [1,0], "size" : [100,231], "mode": "vertical", "children" : [
+					{ "type" : "panel", "id" : "bioPanel", "size" : [100,50], "expandMode" : [1, 0], "style" : "convex", "children" : [
+					]},
+					[
+						{"mode":"h", "expandMode":[1,1]},
+						{ "type" : "panel", "id" : "extraTabsPanel", "style" : "convex", "children" : [
+							{ "mode" : "v"}
+						]},
+						[
+							{ "mode" : "v", "size" : 82},
+							{ "type" : "panel", "id" : "accessoriesPanel", "style" : "convex", "expandMode" : [1,0], "children" : [
+								{ "mode" : "v" },
+								{ "type" : "label", "text" : "Cosmetics", "align" : "center"},
+								[
+									{ "type" : "itemSlot", "id" : "headCosmetic", "glyph" : "/interface/scripted/sbq/headSlot.png" },
+									{ "type" : "itemSlot", "id" : "chestCosmetic", "glyph" : "/interface/scripted/sbq/chestSlot.png" },
+									{ "type" : "itemSlot", "id" : "legsCosmetic", "glyph" : "/interface/scripted/sbq/legsSlot.png" },
+									{ "type" : "itemSlot", "id" : "backCosmetic", "glyph" : "/interface/scripted/sbq/backSlot.png" }
+								]
+								/*
+								{ "type" : "label", "text" : "Accessories", "align" : "center"},
+								[
+									{ "type" : "itemSlot", "id" : "collarAccessory", "glyph" : "/interface/scripted/sbq/collarSlot.png" },
+									{ "type" : "itemSlot", "id" : "braAccessory", "glyph" : "/interface/scripted/sbq/braSlot.png" },
+									{ "type" : "itemSlot", "id" : "pantiesAccessory", "glyph" : "/interface/scripted/sbq/pantiesSlot.png" },
+									{ "type" : "itemSlot", "id" : "socksAccessory", "glyph" : "/interface/scripted/sbq/socksSlot.png" }
+								]
+								*/
+							]},
+							{ "type" : "panel", "id" : "personalityPanel", "expandMode" : [1, 0], "style" : "convex", "children" : [
+								{ "mode" : "h" },
+								{ "type" : "label", "text" : "P", "inline" : true },
+								{ "type" : "iconButton", "id" : "decPersonality", "image" : "/interface/pickleft.png", "hoverImage" : "/interface/pickleftover.png" },
+								{ "type" : "textBox", "id" : "personalityText", "expandMode" : [1, 0], "toolTip": "Личность" },
+								{ "type" : "iconButton", "id" : "incPersonality", "image" : "/interface/pickright.png", "hoverImage" : "/interface/pickrightover.png" }
+							]},
+							{ "type" : "panel", "id" : "questSettingsPanel", "expandMode" : [1, 0], "style" : "convex", "children" : [
+								{ "mode" : "v"},
+								[{"mode":"h"},{ "type" : "checkBox", "id" : "questParticipation", "toolTip" : "Разрешить NPC выдавать квесты и участвовать в них.\n(Заставляет NPC возрождаться, если переключено)" },{ "type" : "label", "text" : " Quests", "inline" : true }],
+								[{"mode":"h"},{ "type" : "checkBox", "id" : "crewmateGraduation", "toolTip" : "Разрешить NPC переходить в разряд товарищей или других типов NPC.\n(Заставляет NPC возрождаться, если переключено)" },{ "type" : "label", "text" : " Graduation", "inline" : true }]
+							]},
+							[
+								{"expandMode" : [2, 2]}
+							],
+							{"type" : "button", "id" : "hideBio", "caption" : "Hide Bio", "expandMode" : [1, 0]},
+							{"type" : "button", "id" : "revertNPC", "caption" : "Revert", "toolTip" : "Возвращает этого NPC к эквивалентной ванильной версии.", "expandMode" : [1, 0]}
+						]
+					]
+				]},
+				{"type" : "layout", "mode" : "vertical", "id" : "notStarbecueNPC", "children" : [
+					{"type" : "label", "text" : "This NPC is not a Starbecue NPC.", "align" : "center" },
+					{"type" : "button", "id" : "convertNPC", "caption" : "Convert", "toolTip" : "Преобразование данного NPC в эквивалентную версию SBQ.", "expandMode" : [0, 0]}
+				]}
+			]},
+			{ "type" : "tab", "id" : "globalPredSettings", "title" : "Pred", "icon" : "/items/active/sbqController/oralVore.png", "visible" : true, "color" : "ff00ff", "contents" : [
+				{"type" : "layout", "id": "globalPredSettingsLayout", "expandMode" : [1,0], "size" : [100,231], "mode": "horizontal", "children" : [
+					{"type" : "layout", "mode" : "vertical", "id" : "locationTabLayout", "expandMode" : [1,0], "size" : [100,231], "children" : [
+					]},
+					[
+						{ "size" : 85 },
+						{ "type" : "panel", "style" : "convex", "expandMode" : [1,0], "children" : [
+							{ "type" : "label", "text" : "Escape Difficulty", "align" : "center" },
+							{"type" : "layout", "mode" : "horizontal", "spacing" : -1, "children" :[
+								//{ "type" : "checkBox", "id" : "impossibleEscape", "toolTip" : "Make escaping impossible" },
+								//{ "type" : "checkBox", "id" : "impossibleEscapeEnable", "toolTip" : "Allow Pred to decide to make escaping impossible" },
+								{ "type" : "textBox", "id" : "escapeValue", "toolTip" : "Current Escape Difficulty", "text" : "0" }
+							]}
+						]},
+						{ "id" : "globalSettingsPanel", "type" : "panel", "size":[80,40], "expandMode" : [1,0], "style" : "convex", "children" : [
+							{ "type" : "scrollArea", "id" : "globalSettingsScrollArea", "thumbScrolling" : true, "scrollBars" : true, "scrollDirections" : [0, 1], "children" : [ { "type" : "panel", "style" : "flat", "children" : [
+								{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
+									[{ "type" : "checkBox", "id" : "displayDigest", "toolTip" : "Эффекты, применяемые к добыче, могут испускать частицы, основанные на эффекте" }, { "type" : "label", "text" : " Эффект отображения" } ],
+									[{ "type" : "checkBox", "id" : "forcefulPrey", "toolTip" : "Позволяет добыче проникать внутрь без запроса\n (если этот тип vore включен и доступен)" }, { "type" : "label", "text" : " Сила добычи" } ],
+									[{ "type" : "checkBox", "id" : "reformResetHealth", "toolTip" : "Когда добыча перерождается, будучи выпущенной после мягкого переваривания или вливания, восстановите ее здоровье до полного." }, { "type" : "label", "text" : " Перезагрузка реформ" } ]
+								]}
+							]}]}
+						]},
+						{ "id" : "voreTypePanel", "type" : "panel", "size":[80,50], "expandMode" : [1,1], "style" : "convex", "children" : [
+							{ "type" : "label", "text" : "Vore Preferences", "align" : "center" },
+							{ "type" : "scrollArea", "id" : "preferencesScrollArea", "thumbScrolling" : true, "scrollBars" : true, "scrollDirections" : [0, 1], "children" : [
+								{ "type" : "panel", "style" : "flat", "children" : [
+									{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "oralVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "oralVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Oral Vore" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "tailVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "tailVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Tail Vore" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "absorbVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "absorbVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Absorbtion" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "navelVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "navelVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Navel Vore" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "analVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "analVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Anal Vore" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "cockVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "cockVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Cock Vore" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "unbirthPred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "unbirthPredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Unbirth" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "breastVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "breastVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Breast Vore" } ],
+										{"type" : "spacer", "size" : 3},
+										{"type" : "label", "text" : "-Body Part TF-", "align" : "center"},
+										{"type" : "spacer", "size" : 3},
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "bellyInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "bellyInfusionPredUnwilling", "toolTip" : "Позволяет добыче TF себя не спрашивать." }, { "type" : "label", "text" : " Belly TF" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "cockInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "cockInfusionPredUnwilling", "toolTip" : "Позволяет добыче TF себя не спрашивать." }, { "type" : "label", "text" : " Cock TF" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "pussyInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "pussyInfusionPredUnwilling", "toolTip" : "Позволяет добыче TF себя не спрашивать." }, { "type" : "label", "text" : " Pussy TF" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "breastsInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "breastsInfusionPredUnwilling", "toolTip" : "Позволяет добыче TF себя не спрашивать." }, { "type" : "label", "text" : " Breast TF" } ]
+									]}
+								]}
+							]}
+						]}
+					]
+				]},
+				{"type" : "label", "id" : "notPredText", "text" : "This NPC is not a Pred.", "align" : "center" }
+			]},
+			{ "type" : "tab", "id" : "globalPreySettings", "title" : "Prey", "icon" : "/interface/scripted/sbq/sbqSettings/preySettings.png", "visible" : true, "color" : "ff00ff", "contents" : [
+				{"type" : "layout", "mode": "horizontal", "id": "globalPreySettingsLayout", "expandMode" : [1,0], "size" : [100,231],  "children" : [
+					{ "type" : "panel", "style" : "convex", "mode" : "vertical", "size" : [80, 231], "expandMode" : [0, 0], "children" : [
+						{ "type" : "label", "text" : "Prey Preferences", "align" : "center" },
+						[{ "type" : "checkBox", "id" : "preyEnabled", "toolTip" : "Включить или выключить возможность быть добычей в целом" }, { "type" : "label", "text" : " Добыча включена" }],
+						{ "type" : "scrollArea", "thumbScrolling" : true, "scrollBars" : true, "scrollDirections" : [0, 1], "children" : [{ "type" : "panel", "style" : "flat", "children" : [{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
+							[{ "type" : "checkBox", "id" : "oralVore" }, { "type" : "label", "text" : " Рот Vore" } ],
+							[{ "type" : "checkBox", "id" : "tailVore" }, { "type" : "label", "text" : " Хвост Vore" } ],
+							[{ "type" : "checkBox", "id" : "absorbVore" }, { "type" : "label", "text" : " Поглощение" } ],
+							[{ "type" : "checkBox", "id" : "navelVore" }, { "type" : "label", "text" : " Пупок Vore" } ],
+							[{ "type" : "checkBox", "id" : "analVore" }, { "type" : "label", "text" : " Анальный Vore" } ],
+							[{ "type" : "checkBox", "id" : "cockVore" }, { "type" : "label", "text" : " Член Vore" } ],
+							[{ "type" : "checkBox", "id" : "breastVore" }, { "type" : "label", "text" : " Грудь Vore" } ],
+							[{ "type" : "checkBox", "id" : "unbirth" }, { "type" : "label", "text" : " Матка" } ],
+							{"type" : "spacer", "size" : 3},
+							{"type" : "label", "text" : "-Body Part TF-", "align" : "center"},
+							{"type" : "spacer", "size" : 3},
+							[{ "type" : "checkBox", "id" : "bellyInfusion" }, { "type" : "label", "text" : " Живот TF" } ],
+							[{ "type" : "checkBox", "id" : "cockInfusion" }, { "type" : "label", "text" : " Член TF" } ],
+							[{ "type" : "checkBox", "id" : "pussyInfusion" }, { "type" : "label", "text" : " Киска TF" } ],
+							[{ "type" : "checkBox", "id" : "breastsInfusion" }, { "type" : "label", "text" : " Грудь TF" } ]
+						]}]}]}
+					]},
+					[
+						{ "type" : "panel", "style" : "convex", "mode" : "vertical", "size" : [100, 160], "expandMode" : [1, 0], "children" : [
+							{ "type" : "label", "text" : "Immunities", "align" : "center" },
+							{ "type" : "scrollArea", "thumbScrolling" : true, "scrollBars" : true, "scrollDirections" : [0, 1], "children" : [{ "type" : "panel", "style" : "flat", "children" : [{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
+								//[{ "type" : "checkBox", "id" : "digestOverallAllow", "toolTip" : "Обеспечивают общее пищеварение." },{ "type" : "checkBox", "id" : "softDigestOverallAllow", "toolTip" : "Обеспечивают мягкое пищеварение в целом." }, { "type" : "checkBox", "id" : "digestOverallItemDropsAllow", "toolTip" : "При переваривании в целом допускаются специальные капли." }, { "type" : "label", "text" : " Общее пищеварение" }],
+								[{ "type" : "checkBox", "id" : "digestAllow", "toolTip" : "Обеспечить пищеварение." },{ "type" : "checkBox", "id" : "softDigestAllow", "toolTip" : "Обеспечивают мягкое пищеварение." }, { "type" : "checkBox", "id" : "digestItemDropsAllow", "toolTip" : "При переваривании выделяют специальные капли." }, { "type" : "label", "text" : " Пищеварение" }],
+								[{ "type" : "checkBox", "id" : "cumDigestAllow", "toolTip" : "Позволяют переваривать в кончу." }, { "type" : "checkBox", "id" : "cumSoftDigestAllow", "toolTip" : "Обеспечивают мягкое переваривание в кончу." }, { "type" : "checkBox", "id" : "cumDigestItemDropsAllow", "toolTip" : "Допускаются специальные капли при переваривании в кончу." }, { "type" : "label", "text" : " Переваривание спермы" }],
+								[{ "type" : "checkBox", "id" : "femcumDigestAllow", "toolTip" : "Обеспечить переваривание в женскую кончу." },{ "type" : "checkBox", "id" : "femcumSoftDigestAllow", "toolTip" : "Обеспечить мягкое пищеварение в женскую кончу ." }, { "type" : "checkBox", "id" : "femcumDigestItemDropsAllow", "toolTip" : "Выпускать специальные капли при переваривании женскую кончу." }, { "type" : "label", "text" : " Переваривание женского молока" }],
+								[{ "type" : "checkBox", "id" : "milkDigestAllow", "toolTip" : "Обеспечить переваривание молока." }, { "type" : "checkBox", "id" : "milkSoftDigestAllow", "toolTip" : "Обеспечивают мягкое переваривание молока." }, { "type" : "checkBox", "id" : "milkDigestItemDropsAllow", "toolTip" : "При переваривании молока разрешается использовать специальные капли." }, { "type" : "label", "text" : " Переваривание молока" }],
+								[{ "type" : "checkBox", "id" : "cumTransformAllow", "toolTip" : "Разрешить преобразование в кончу." }, { "type" : "label", "text" : " Трансформация в кончу" }],
+								[{ "type" : "checkBox", "id" : "transformAllow", "toolTip" : "Разрешить эффекты трансформации." }, { "type" : "label", "text" : " Трансформация" }],
+								[{ "type" : "checkBox", "id" : "genderswapAllow", "toolTip" : "Разрешить эффекты смены пола." }, { "type" : "label", "text" : " Смена пола" }],
+								[{ "type" : "checkBox", "id" : "eggAllow", "toolTip" : "Разрешить быть запертым в яйце" }, { "type" : "label", "text" : " Яичная ловушка" }]
+							]}]}]}
+						]},
+						{ "type" : "panel", "style" : "convex", "mode" : "vertical", "size" : [100, 71], "expandMode" : [1, 0], "children" : [
+							{ "type" : "label", "text" : "Other", "align" : "center" },
+							{ "type" : "scrollArea", "thumbScrolling" : true, "scrollBars" : true, "scrollDirections" : [0, 1], "children" : [{ "type" : "panel", "style" : "flat", "children" : [{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
+								[{ "type" : "checkBox", "id" : "held", "toolTip" : "Можно ли вас схватить, прижать, обнять и т.д.." }, { "type" : "label", "text" : " Захват" } ]
+							]}]}]}
+						]}
+					]
+				]},
+				{"type" : "label", "id" : "notPreyText", "text" : "Этот NPC не является добычей.", "align" : "center" }
+			]},
+			{ "type" : "tab", "id" : "speciesConfigTab", "title" : "", "icon" : "/interface/scripted/sbq/sbqSettings/sbqCodex.png", "visible" : true, "color" : "ff00ff", "contents" : [
+				{"type" : "layout", "id" : "speciesConfigTabContents", "align" : 0, "expandMode" : [1,0], "size" : [100,231],  "mode" : "horizontal", "children" : [] }
+			]},
+			{ "type" : "tab", "id" : "speciesHelpTab", "title" : "", "icon" : "/interface/scripted/sbq/sbqSettings/sbqCodex.png", "visible" : true, "color" : "ff00ff", "contents" : [
+				{"type" : "layout", "id" : "speciesHelpTabContents", "align" : 0, "expandMode" : [1,0], "size" : [100,231], "mode" : "horizontal", "children" : [] }
+			]},
+			{ "type" : "tab", "id" : "helpTab", "title" : "", "icon" : "/interface/scripted/sbq/sbqSettings/sbqCodex.png", "visible" : true, "color" : "ff00ff", "contents" : [
+				{"type" : "layout", "id" : "helpTabContents", "align" : 0, "expandMode" : [1,0], "size" : [100,231], "mode" : "horizontal", "children" : [] }
+			]}
+		]}
+	]
+}

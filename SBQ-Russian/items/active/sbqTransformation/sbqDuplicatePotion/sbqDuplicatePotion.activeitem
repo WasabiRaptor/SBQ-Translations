@@ -1,0 +1,27 @@
+{
+	"itemName" : "sbqDuplicatePotion",
+	"level" : 1,
+	"price" : 600,
+	"maxStack" : 1,
+	"rarity" : "uncommon",
+	"description" : "Зелье, способное превратить человека в твою идеальную копию, - все, что ему нужно, это еще один ингредиент... немного тебя самого.",
+	"shortdescription" : "Дублирующее зелье",
+	"tooltipKind" : "tool",
+	"category" : "Potion",
+	"twoHanded" : false,
+	"itemTags" : ["sbqTransformation"],
+
+	"inventoryIcon" : "sbqPotion.png",
+	"largeImage" : "sbqPotionLarge.png",
+
+	"animationParts" : {
+		"potion" : "sbqPotion.png"
+	},
+
+	"animation" : "/items/active/sbqTransformation/sbqPotion.animation",
+
+	"scripts" : [
+		"/items/active/sbqTransformation/sbqDuplicatePotion/sbqDuplicatePotion.lua",
+		"/items/active/activeitemOverrides.lua"
+	]
+}

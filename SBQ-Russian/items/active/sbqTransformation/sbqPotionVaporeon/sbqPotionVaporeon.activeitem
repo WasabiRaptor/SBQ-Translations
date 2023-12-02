@@ -1,0 +1,30 @@
+{
+	"itemName" : "sbqPotionVaporeon",
+	"level" : 1,
+	"price" : 500,
+	"maxStack" : 1,
+	"rarity" : "Legendary",
+	"description" : "Украшенная бутылка с густой синей жидкостью...",
+	"shortdescription" : "Гигантский вапореон Goo",
+	"tooltipKind" : "tool",
+	"category" : "Potion",
+	"twoHanded" : false,
+	"itemTags" : ["sbqTransformation"],
+
+	"vehicle" : "sbqVaporeon",
+	"transformationDescription" : "a giant vaporeon",
+
+	"inventoryIcon" : "sbqPotion.png",
+	"largeImage" : "sbqPotionLarge.png",
+
+	"animationParts" : {
+		"potion" : "sbqPotion.png"
+	},
+
+	"animation" : "/items/active/sbqTransformation/sbqPotion.animation",
+
+	"scripts" : [
+		"/items/active/sbqTransformation/sbqTransformPotion.lua",
+		"/items/active/activeitemOverrides.lua"
+	]
+}

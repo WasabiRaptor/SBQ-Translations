@@ -1,0 +1,78 @@
+{
+	"objectName" : "sbqFireplaceTeleporter",
+	"colonyTags" : ["drimyr","drimyrcastle","light","glitch","glitchcastle","magicfire"],
+	"objectType" : "teleporter",
+	"rarity" : "Rare",
+	"category" : "teleporter",
+	"price" : 3000,
+	"subtitle" : "Warping Fireplace",
+	"printable" : true,
+
+	"description" : "Каменный камин. Хороший способ согреться в холодном замке.",
+	"shortdescription" : "Искривление камина",
+	"race" : "glitch",
+
+	"apexDescription" : "Треск огня умиротворяет меня.",
+	"avianDescription" : "Каменное строение и костер внутри. Вероятно, сооружен для обеспечения тепла.",
+	"floranDescription" : "Флоран предпочитает мерзнуть, а не сидеть у огня.",
+	"glitchDescription" : "Тоскливо. Я обожаю сидеть у костра в холодную ночь..",
+	"humanDescription" : "Теплый каменный костер. Все, что мне нужно, это мешок зефира.",
+	"hylotlDescription" : "Температура в городах Хайлотла тщательно контролируется. Приятно ощущать тепло огня на своей коже.",
+	"novakidDescription" : "Ничто не сравнится со сладким запахом лесного дыма.",
+
+	"statusEffects" : [ ],
+
+	"lightColor" : [77, 253, 111],
+
+	"flickerPeriod" : 0.3,
+	"flickerMinIntensity" : 0.95,
+	"flickerMaxIntensity" : 1,
+	"flickerPeriodVariance" : 0.075,
+	"flickerIntensityVariance" : 0.025,
+
+	"inventoryIcon" : "sbqFireplaceTeleporterIcon.png",
+	"orientations" : [
+		{
+			"image" : "sbqFireplaceTeleporter.png",
+			"imagePosition" : [-16, 0],
+			"animationPosition" : [-16, 0],
+			"direction" : "left",
+			"flipImages" : true,
+
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ],
+			"collision" : "platform"
+		},
+		{
+			"image" : "sbqFireplaceTeleporter.png",
+			"imagePosition" : [-16, 0],
+			"animationPosition" : [-16, 0],
+			"direction" : "right",
+
+			"spaceScan" : 0.1,
+			"anchors" : [ "bottom" ],
+			"collision" : "platform"
+		}
+	],
+
+	"soundEffect" : "/sfx/objects/furnace.ogg",
+
+	"animation" : "sbqFireplaceTeleporter.animation",
+
+	"scripts" : [
+		"/objects/wired/light/light.lua",
+		"/objects/sbq/sbqFireplaceTeleporter/sbqFireplaceTeleporter.lua"
+	],
+	"scriptDelta" : 60,
+
+	"inputNodes" : [
+		[0, 0],
+		[0, 3]
+	],
+	"outputNodes" : [
+		[0, 4]
+	],
+	"teleporterFootPosition" : [0, 0],
+	"interactive" : true
+
+}
