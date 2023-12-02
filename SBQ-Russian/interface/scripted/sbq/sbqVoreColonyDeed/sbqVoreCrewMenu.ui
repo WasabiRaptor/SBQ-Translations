@@ -19,7 +19,7 @@
 				"spacer",
 				{"type" : "label", "id" : "tryWarpingLabel", "text" : "^#555;Если меню выглядит не совсем корректно, попробуйте переключиться в режим обновления команды.", "align" : "center" }
 			]},
-			{ "type" : "tab", "id" : "tenantTab", "title" : "NPC", "icon" : "/objects/sbq/sbqVoreColonyDeed/sbqVoreColonyDeedIcon.png", "color" : "ff00ff", "contents" : [
+			{ "type" : "tab", "id" : "tenantTab", "title" : "НПС", "icon" : "/objects/sbq/sbqVoreColonyDeed/sbqVoreColonyDeedIcon.png", "color" : "ff00ff", "contents" : [
 				{"type" : "layout", "id": "globalTenantSettingsLayout", "expandMode" : [1,0], "size" : [100,231], "mode": "vertical", "children" : [
 					{ "type" : "panel", "id" : "bioPanel", "size" : [100,50], "expandMode" : [1, 0], "style" : "convex", "children" : [
 					]},
@@ -32,7 +32,7 @@
 							{ "mode" : "v", "size" : 82},
 							{ "type" : "panel", "id" : "accessoriesPanel", "style" : "convex", "expandMode" : [1,0], "children" : [
 								{ "mode" : "v" },
-								{ "type" : "label", "text" : "Cosmetics", "align" : "center"},
+								{ "type" : "label", "text" : "Косметика", "align" : "center"},
 								[
 									{ "type" : "itemSlot", "id" : "headCosmetic", "glyph" : "/interface/scripted/sbq/headSlot.png" },
 									{ "type" : "itemSlot", "id" : "chestCosmetic", "glyph" : "/interface/scripted/sbq/chestSlot.png" },
@@ -40,7 +40,7 @@
 									{ "type" : "itemSlot", "id" : "backCosmetic", "glyph" : "/interface/scripted/sbq/backSlot.png" }
 								]
 								/*
-								{ "type" : "label", "text" : "Accessories", "align" : "center"},
+								{ "type" : "label", "text" : "Аксессуары", "align" : "center"},
 								[
 									{ "type" : "itemSlot", "id" : "collarAccessory", "glyph" : "/interface/scripted/sbq/collarSlot.png" },
 									{ "type" : "itemSlot", "id" : "braAccessory", "glyph" : "/interface/scripted/sbq/braSlot.png" },
@@ -53,7 +53,7 @@
 								{ "mode" : "h" },
 								{ "type" : "label", "text" : "P", "inline" : true },
 								{ "type" : "iconButton", "id" : "decPersonality", "image" : "/interface/pickleft.png", "hoverImage" : "/interface/pickleftover.png" },
-								{ "type" : "textBox", "id" : "personalityText", "expandMode" : [1, 0], "toolTip": "Personality" },
+								{ "type" : "textBox", "id" : "personalityText", "expandMode" : [1, 0], "toolTip": "Личность" },
 								{ "type" : "iconButton", "id" : "incPersonality", "image" : "/interface/pickright.png", "hoverImage" : "/interface/pickrightover.png" }
 							]},
 							{ "type" : "panel", "id" : "questSettingsPanel", "expandMode" : [1, 0], "style" : "convex", "children" : [
@@ -74,18 +74,18 @@
 					{"type" : "button", "id" : "convertNPC", "caption" : "Convert", "toolTip" : "Преобразование данного NPC в эквивалентную версию SBQ.", "expandMode" : [0, 0]}
 				]}
 			]},
-			{ "type" : "tab", "id" : "globalPredSettings", "title" : "Pred", "icon" : "/items/active/sbqController/oralVore.png", "visible" : true, "color" : "ff00ff", "contents" : [
+			{ "type" : "tab", "id" : "globalPredSettings", "title" : "Хищник", "icon" : "/items/active/sbqController/oralVore.png", "visible" : true, "color" : "ff00ff", "contents" : [
 				{"type" : "layout", "id": "globalPredSettingsLayout", "expandMode" : [1,0], "size" : [100,231], "mode": "horizontal", "children" : [
 					{"type" : "layout", "mode" : "vertical", "id" : "locationTabLayout", "expandMode" : [1,0], "size" : [100,231], "children" : [
 					]},
 					[
 						{ "size" : 85 },
 						{ "type" : "panel", "style" : "convex", "expandMode" : [1,0], "children" : [
-							{ "type" : "label", "text" : "Escape Difficulty", "align" : "center" },
+							{ "type" : "label", "text" : "Сложность побега", "align" : "center" },
 							{"type" : "layout", "mode" : "horizontal", "spacing" : -1, "children" :[
 								//{ "type" : "checkBox", "id" : "impossibleEscape", "toolTip" : "Сделать побег невозможным" },
-								//{ "type" : "checkBox", "id" : "impossibleEscapeEnable", "toolTip" : "Allow Pred to decide to make escaping impossible" },
-								{ "type" : "textBox", "id" : "escapeValue", "toolTip" : "Current Escape Difficulty", "text" : "0" }
+								//{ "type" : "checkBox", "id" : "impossibleEscapeEnable", "toolTip" : "Позволить Хищнику принимать решение о том, чтобы сделать побег невозможным" },
+								{ "type" : "textBox", "id" : "escapeValue", "toolTip" : "Текущая сложность побега", "text" : "0" }
 							]}
 						]},
 						{ "id" : "globalSettingsPanel", "type" : "panel", "size":[80,40], "expandMode" : [1,0], "style" : "convex", "children" : [
@@ -98,25 +98,25 @@
 							]}]}
 						]},
 						{ "id" : "voreTypePanel", "type" : "panel", "size":[80,50], "expandMode" : [1,1], "style" : "convex", "children" : [
-							{ "type" : "label", "text" : "Vore Preferences", "align" : "center" },
+							{ "type" : "label", "text" : "Предпочтения Vore", "align" : "center" },
 							{ "type" : "scrollArea", "id" : "preferencesScrollArea", "thumbScrolling" : true, "scrollBars" : true, "scrollDirections" : [0, 1], "children" : [
 								{ "type" : "panel", "style" : "flat", "children" : [
 									{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
-										[{"mode":"h"},{ "type" : "checkBox", "id" : "oralVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "oralVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Oral Vore" } ],
-										[{"mode":"h"},{ "type" : "checkBox", "id" : "tailVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "tailVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Tail Vore" } ],
-										[{"mode":"h"},{ "type" : "checkBox", "id" : "absorbVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "absorbVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Absorbtion" } ],
-										[{"mode":"h"},{ "type" : "checkBox", "id" : "navelVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "navelVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Navel Vore" } ],
-										[{"mode":"h"},{ "type" : "checkBox", "id" : "analVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "analVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Anal Vore" } ],
-										[{"mode":"h"},{ "type" : "checkBox", "id" : "cockVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "cockVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Cock Vore" } ],
-										[{"mode":"h"},{ "type" : "checkBox", "id" : "unbirthPred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "unbirthPredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Unbirth" } ],
-										[{"mode":"h"},{ "type" : "checkBox", "id" : "breastVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "breastVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Breast Vore" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "oralVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "oralVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Рот Vore" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "tailVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "tailVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Хвост Vore" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "absorbVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "absorbVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Поглощение" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "navelVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "navelVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Пупок Vore" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "analVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "analVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Анальный Vore" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "cockVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "cockVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Член Vore" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "unbirthPred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "unbirthPredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Матка" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "breastVorePred", "toolTip" : "Включает данный тип vore." }, { "type" : "checkBox", "id" : "breastVorePredUnwilling", "toolTip" : "Позволяет жертве проникать внутрь без спроса." }, { "type" : "label", "text" : " Грудь Vore" } ],
 										{"type" : "spacer", "size" : 3},
-										{"type" : "label", "text" : "-Body Part TF-", "align" : "center"},
+										{"type" : "label", "text" : "-Часть тела TF-", "align" : "center"},
 										{"type" : "spacer", "size" : 3},
-										[{"mode":"h"},{ "type" : "checkBox", "id" : "bellyInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "bellyInfusionPredUnwilling", "toolTip" : "Позволяет добыче TF себя не спрашивать." }, { "type" : "label", "text" : " Belly TF" } ],
-										[{"mode":"h"},{ "type" : "checkBox", "id" : "cockInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "cockInfusionPredUnwilling", "toolTip" : "Позволяет добыче TF себя не спрашивать." }, { "type" : "label", "text" : " Cock TF" } ],
-										[{"mode":"h"},{ "type" : "checkBox", "id" : "pussyInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "pussyInfusionPredUnwilling", "toolTip" : "Позволяет добыче TF себя не спрашивать." }, { "type" : "label", "text" : " Pussy TF" } ],
-										[{"mode":"h"},{ "type" : "checkBox", "id" : "breastsInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "breastsInfusionPredUnwilling", "toolTip" : "Позволяет добыче TF себя не спрашивать." }, { "type" : "label", "text" : " Breast TF" } ]
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "bellyInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "bellyInfusionPredUnwilling", "toolTip" : "Позволяет добыче TF себя не спрашивать." }, { "type" : "label", "text" : " Живот TF" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "cockInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "cockInfusionPredUnwilling", "toolTip" : "Позволяет добыче TF себя не спрашивать." }, { "type" : "label", "text" : " Член TF" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "pussyInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "pussyInfusionPredUnwilling", "toolTip" : "Позволяет добыче TF себя не спрашивать." }, { "type" : "label", "text" : " Киска TF" } ],
+										[{"mode":"h"},{ "type" : "checkBox", "id" : "breastsInfusionPred", "toolTip" : "Включает данную часть тела TF" },{ "type" : "checkBox", "id" : "breastsInfusionPredUnwilling", "toolTip" : "Позволяет добыче TF себя не спрашивать." }, { "type" : "label", "text" : " Грудь TF" } ]
 									]}
 								]}
 							]}
@@ -125,10 +125,10 @@
 				]},
 				{"type" : "label", "id" : "notPredText", "text" : "Этот NPC не является Хищником.", "align" : "center" }
 			]},
-			{ "type" : "tab", "id" : "globalPreySettings", "title" : "Prey", "icon" : "/interface/scripted/sbq/sbqSettings/preySettings.png", "visible" : true, "color" : "ff00ff", "contents" : [
+			{ "type" : "tab", "id" : "globalPreySettings", "title" : "Добыча", "icon" : "/interface/scripted/sbq/sbqSettings/preySettings.png", "visible" : true, "color" : "ff00ff", "contents" : [
 				{"type" : "layout", "mode": "horizontal", "id": "globalPreySettingsLayout", "expandMode" : [1,0], "size" : [100,231],  "children" : [
 					{ "type" : "panel", "style" : "convex", "mode" : "vertical", "size" : [80, 231], "expandMode" : [0, 0], "children" : [
-						{ "type" : "label", "text" : "Prey Preferences", "align" : "center" },
+						{ "type" : "label", "text" : "Предпочтение добычы", "align" : "center" },
 						[{ "type" : "checkBox", "id" : "preyEnabled", "toolTip" : "Включить или выключить возможность быть добычей в целом" }, { "type" : "label", "text" : " Prey Enabled" }],
 						{ "type" : "scrollArea", "thumbScrolling" : true, "scrollBars" : true, "scrollDirections" : [0, 1], "children" : [{ "type" : "panel", "style" : "flat", "children" : [{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
 							[{ "type" : "checkBox", "id" : "oralVore" }, { "type" : "label", "text" : " Рот Vore" } ],
@@ -140,7 +140,7 @@
 							[{ "type" : "checkBox", "id" : "breastVore" }, { "type" : "label", "text" : " Грудь Vore" } ],
 							[{ "type" : "checkBox", "id" : "unbirth" }, { "type" : "label", "text" : " Матка" } ],
 							{"type" : "spacer", "size" : 3},
-							{"type" : "label", "text" : "-Body Part TF-", "align" : "center"},
+							{"type" : "label", "text" : "-Части телаTF-", "align" : "center"},
 							{"type" : "spacer", "size" : 3},
 							[{ "type" : "checkBox", "id" : "bellyInfusion" }, { "type" : "label", "text" : " Живот TF" } ],
 							[{ "type" : "checkBox", "id" : "cockInfusion" }, { "type" : "label", "text" : " Член TF" } ],
@@ -160,18 +160,18 @@
 								[{ "type" : "checkBox", "id" : "cumTransformAllow", "toolTip" : "Разрешить преобразование в кончу." }, { "type" : "label", "text" : " Трансформация в кончу" }],
 								[{ "type" : "checkBox", "id" : "transformAllow", "toolTip" : "Разрешить эффекты трансформации." }, { "type" : "label", "text" : " Трансформация" }],
 								[{ "type" : "checkBox", "id" : "genderswapAllow", "toolTip" : "Разрешить эффекты смены пола." }, { "type" : "label", "text" : " Смена пола" }],
-								[{ "type" : "checkBox", "id" : "eggAllow", "toolTip" : "сЯичная ловушка." }, { "type" : "label", "text" : " Яичная ловушка" }]
+								[{ "type" : "checkBox", "id" : "eggAllow", "toolTip" : "Яичная ловушка." }, { "type" : "label", "text" : " Яичная ловушка" }]
 							]}]}]}
 						]},
 						{ "type" : "panel", "style" : "convex", "mode" : "vertical", "size" : [100, 71], "expandMode" : [1, 0], "children" : [
-							{ "type" : "label", "text" : "Other", "align" : "center" },
+							{ "type" : "label", "text" : "Другое", "align" : "center" },
 							{ "type" : "scrollArea", "thumbScrolling" : true, "scrollBars" : true, "scrollDirections" : [0, 1], "children" : [{ "type" : "panel", "style" : "flat", "children" : [{"type" : "layout", "mode" : "vertical", "spacing" : -1, "children" : [
 								[{ "type" : "checkBox", "id" : "held", "toolTip" : "Можно ли вас схватить, прижать, обнять и т.д.." }, { "type" : "label", "text" : " Захват" } ]
 							]}]}]}
 						]}
 					]
 				]},
-				{"type" : "label", "id" : "notPreyText", "text" : "This NPC is not Prey.", "align" : "center" }
+				{"type" : "label", "id" : "notPreyText", "text" : "Этот NPC не является добычей.", "align" : "center" }
 			]},
 			{ "type" : "tab", "id" : "speciesConfigTab", "title" : "", "icon" : "/interface/scripted/sbq/sbqSettings/sbqCodex.png", "visible" : true, "color" : "ff00ff", "contents" : [
 				{"type" : "layout", "id" : "speciesConfigTabContents", "align" : 0, "expandMode" : [1,0], "size" : [100,231],  "mode" : "horizontal", "children" : [] }

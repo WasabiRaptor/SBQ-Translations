@@ -1,0 +1,91 @@
+{
+  "id" : "sbq_change_species.generated",
+  "parameters" : {
+    "questGiver" : {
+      "type" : "entity"
+    },
+    "target" : {
+      "type" : "entity",
+      "example" : {
+        "name" : "Role Model"
+      }
+    },
+    "newSpecies" : {
+      "type" : "noDetail",
+      "example" : "axhylotl"
+    },
+    "article" : {
+      "type" : "noDetail",
+      "example" : "an"
+    }
+  },
+  "moneyRange" : [10, 50],
+  "rewards" : [ ],
+  "rewardParameters" : [ "rewards" ],
+  "canBeAbandoned" : true,
+  "ephemeral" : true,
+
+  "updateDelta" : 60,
+  "script" : "/quests/scripts/generated/sbq_change_species.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "default" : "questGiver"
+    },
+    "generatedText" : {
+      "text" : {
+        "first" : {
+          "default" : [
+            "Я думаю, что смогу по-настоящему узнать ^orange;<target>^white; лучше, если бы я мог стать таким же, как они... Как ты думаешь, можно ли найти способ ^green;превратить меня в <article> <newSpecies>^white;?"
+          ]
+        },
+        "default" : {
+          "default" : [
+            "Ты знаешь, <newSpecies> довольно удивительны... Посмотрите, сможешь ли ты ^green;превратить меня в <article> <newSpecies>^white; например, ^orange;<target>^white;!"
+          ]
+        }
+      },
+      "title" : {
+        "default" : [
+          "<questGiver>'s <newSpecies> сон"
+        ]
+      },
+      "goalText" : {
+        "default" : [
+          "^cyan;Я хотел(а) бы стать <article> <newSpecies>!"
+        ]
+      },
+      "completionText" : {
+        "first" : {
+          "default" : [
+            "Вот это да! Я должен(на) позволить <target> знать!"
+          ]
+        },
+        "default" : {
+          "default" : [
+            "Спасибо! Это действительно удивительно!"
+          ]
+        }
+      }
+    },
+    "goalSpecies" : "newSpecies",
+    "portraitParameter" : "questGiver",
+    "requireTurnIn" : true,
+    "indicators" : ["questGiver"],
+
+    "objectives" : [
+      {
+        "id" : "transform",
+        "text" : "Превратить <questGiver> в <article> <newSpecies>"
+      },
+      {
+        "id" : "return",
+        "text" : "Вернуться к <questGiver>"
+      }
+    ],
+
+    "initialCompassTarget" : {
+      "targetType" : "parameter",
+      "target" : "questGiver"
+    }
+  }
+}

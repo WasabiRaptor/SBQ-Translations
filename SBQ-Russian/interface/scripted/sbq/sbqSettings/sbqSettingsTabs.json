@@ -121,7 +121,7 @@
 					]},
 					{ "type" : "panel", "id" : "genderswapPanel", "expandMode" : [1,0], "style" : "convex", "children" : [
 						{"mode": "vertical", "spacing" : 0},
-						{ "type" : "label", "text" : "Genderswap Transformation", "align" : "center" },
+						{ "type" : "label", "text" : "Трансформация с изменением пола", "align" : "center" },
 						[
 							//{ "type" : "checkBox", "id" : "TGOnlyEnable", "visible" : false},
 							{ "type" : "checkBox", "id" : "TGOnly", "toolTip" : "Во время TF оставлять вид добычи неизменным."}, { "id" : "TGOnlyLabel", "type" : "label", "text" : " Отключить виды TF" }],
@@ -132,7 +132,7 @@
 					]},
 					{ "type" : "panel", "id" : "performanceSettingsPanel", "expandMode" : [1,0], "style" : "convex", "children" : [
 						{"mode": "vertical", "spacing" : 0},
-						{ "type" : "label", "text" : "Performance Settings", "align" : "center" },
+						{ "type" : "label", "text" : "Настройки производительности", "align" : "center" },
 						[
 							{ "type" : "checkBox", "id" : "noSpriteRedraw", "toolTip" : "Полностью отключить перерисовку спрайтов, что означает отсутствие графики vore, TF или TG, а также отсутствие масштабирования по размеру." },
 							{ "type" : "checkBox", "id" : "noHandItems", "toolTip" : "Отключить все ручные элементы." },

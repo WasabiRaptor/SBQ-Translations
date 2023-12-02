@@ -8,13 +8,13 @@
 	"children" : [
 		{ "type" : "panel", "style" : "flat", "children" : [
 			{"mode" : "v"},
-			{"type":"label", "text":"Size", "align" : "center"},
+			{"type":"label", "text":"Размер", "align" : "center"},
 			[{"type":"textBox", "id":"widthEntry", "caption" : "1"},
 			{"type":"textBox", "id":"heightEntry", "caption" : "1"}]
 		]},
 		{ "type" : "panel", "style" : "flat", "children" : [
 			{"mode" : "v"},
-			{"type":"label", "text":"Offset", "align" : "center"},
+			{"type":"label", "text":"Смещение", "align" : "center"},
 			[{"type":"textBox", "id":"offsetXEntry", "caption" : "0"},
 			{"type":"textBox", "id":"offsetYEntry", "caption" : "0"}]
 		]}

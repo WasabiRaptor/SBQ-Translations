@@ -55,25 +55,25 @@
 		"dialogueFile" : "/npcs/tenants/sbq/ocs/sbqAuri_LokiVulpix.dialogue",
 		"greeting" : {
 			"new" : {
-				"randomButtonText" : ["[Опции]"],
-				"randomDialogue" : [":магазин Приветствие"],
+				"randomButtonText" : ["[Options]"],
+				"randomDialogue" : [":shopGreeting"],
 				"options" : [
-					["Что это за место?", ".place"],
-					["Можешь ли ты съесть меня?", ".npc"],
-					["Расскажи о себе", ".talkAboutSelf"],
-					["Я думаю, что у меня ошибка!", ".fixData", { "checkScript":"fixData"} ]
+					["What is this place?", ".place"],
+					["Can you eat me?", ".npc"],
+					["Tell me about yourself", ".talkAboutSelf"],
+					["I think I'm bugged!", ".fixData", { "checkScript":"fixData"} ]
 				]
 			}
 		},
 		"converse" : {
 			"new" : {
-				"randomButtonText" : ["[Опции]"],
-				"randomDialogue" : [":магазин Конверс"],
+				"randomButtonText" : ["[Options]"],
+				"randomDialogue" : [":shopConverse"],
 				"options" : [
-					["Что это за место?", ".place"],
-					["Можешь ли ты съесть меня?", ".npc"],
-					["Расскажи о себе", ".talkAboutSelf"],
-					["Я думаю, что у меня ошибка!", ".fixData", { "checkScript":"fixData"} ]
+					["What is this place?", ".place"],
+					["Can you eat me?", ".npc"],
+					["Tell me about yourself", ".talkAboutSelf"],
+					["I think I'm bugged!", ".fixData", { "checkScript":"fixData"} ]
 				]
 			}
 		},

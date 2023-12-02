@@ -8,7 +8,7 @@
 	"children" : [
 		{ "type" : "panel", "style" : "flat", "children" : [
 			{"mode" : "v"},
-			{"type":"label", "text":"Direction", "align" : "center"},
+			{"type":"label", "text":"Направление", "align" : "center"},
 			[
 				{"type": "checkBox", "id": "horizontalButton", "radioGroup": "direction", "value" : "h"},{"type":"label", "text":"H -", "align" : "left"},
 				{"type": "checkBox", "id": "verticalButton", "radioGroup": "direction", "value" : "v"},{"type":"label", "text":"V |", "align" : "left"}
@@ -16,7 +16,7 @@
 		]},
 		{ "type" : "panel", "style" : "flat", "children" : [
 			{"mode" : "v"},
-			{"type":"label", "text":"Length", "align" : "center"},
+			{"type":"label", "text":"Длина", "align" : "center"},
 			{"type":"textBox", "id":"lengthEntry", "caption" : "1"}
 		]}
 	]

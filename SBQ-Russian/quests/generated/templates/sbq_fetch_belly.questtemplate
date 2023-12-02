@@ -1,0 +1,94 @@
+{
+  "id" : "sbq_fetch_belly.generated",
+  "parameters" : {
+    "questGiver" : {
+      "type" : "entity"
+    },
+    "fetchedItems" : {
+      "type" : "itemList",
+      "example" : {
+        "items" : [
+          {"name" : "banana", "count" : 3},
+          {"name" : "teleportercore", "count" : 1}
+        ]
+      }
+    }
+  },
+  "moneyRange" : [10, 50],
+  "rewards" : [ ],
+  "rewardParameters" : [ "rewards" ],
+  "canBeAbandoned" : true,
+  "ephemeral" : true,
+
+  "updateDelta" : 60,
+  "script" : "/quests/scripts/generated/sbq_fetch_belly.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "default" : "questGiver"
+    },
+    "generatedText" : {
+      "text" : {
+        "first" : {
+          "default" : [
+            "Но, во-первых, мой желудок убивает меня! Как ты думаешь, ты мог(ла) бы... ^green;загнянуть в внутр^white;? Выяснить причину неисправности?"
+          ]
+        },
+        "default" : {
+          "default" : [
+            "Кажется, у меня что-то застряло в горле. ^green;Можешь посмотреть внимательно^white;? Возможно, тебе придётся залезть туда довольно глубоко..."
+          ]
+        }
+      },
+      "title" : {
+        "default" : [
+          "<questGiver>'s расстройство желудка"
+        ]
+      },
+      "goalText" : {
+        "default" : [
+          "^cyan;Мне нужна помощь в решении проблем с желудком."
+        ]
+      },
+      "completionText" : {
+        "last" : {
+          "default" : [
+            "Oх! Вот к чему это привело, хаха! В качестве благодарности, ты можешь получить это."
+          ]
+        },
+        "default" : {
+          "default" : [
+            "Отлично! Я как раз искал(а) это..."
+          ]
+        }
+      }
+    },
+    "fetchList" : "fetchedItems",
+    "portraitParameter" : "questGiver",
+    "requireTurnIn" : true,
+    "indicators" : ["questGiver"],
+
+    "objectives" : [
+      {
+        "id" : "enter",
+        "text" : "Найти свой путь внутри <questGiver>"
+      },
+      {
+        "id" : "fetch",
+        "text" : "Получить <fetchedItems> из <questGiver>"
+      },
+      {
+        "id" : "exit",
+        "text" : "Найди обратный путь из <questGiver>"
+      },
+      {
+        "id" : "return",
+        "text" : "Верни  <fetchedItems> к <questGiver>"
+      }
+    ],
+    
+    "initialCompassTarget" : {
+      "targetType" : "parameter",
+      "target" : "questGiver"
+    }
+  }
+}

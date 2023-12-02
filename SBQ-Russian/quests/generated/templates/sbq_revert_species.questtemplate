@@ -1,0 +1,83 @@
+{
+  "id" : "sbq_revert_species.generated",
+  "parameters" : {
+    "questGiver" : {
+      "type" : "entity"
+    },
+    "currentSpecies" : {
+      "type" : "noDetail",
+      "example" : "axhylotl"
+    },
+    "originalSpecies" : {
+      "type" : "noDetail",
+      "example" : "normal human"
+    },
+    "currentArticle" : {
+      "type" : "noDetail",
+      "example" : "an"
+    },
+    "originalArticle" : {
+      "type" : "noDetail",
+      "example" : "a"
+    }
+  },
+  "moneyRange" : [10, 50],
+  "rewards" : [ ],
+  "rewardParameters" : [ "rewards" ],
+  "canBeAbandoned" : true,
+  "ephemeral" : true,
+
+  "updateDelta" : 60,
+  "script" : "/quests/scripts/generated/sbq_change_species.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "default" : "questGiver"
+    },
+    "generatedText" : {
+      "text" : {
+        "default" : {
+          "default" : [
+            "Я думаю, мне надоело быть <currentArticle> <currentSpecies>. Можешь ли ты ^green;преврати меня обратно в <originalArticle> ^orange;<originalSpecies>^white;, как раньше?"
+          ]
+        }
+      },
+      "title" : {
+        "default" : [
+          "<questGiver>'s верни меня к нормальной жизни"
+        ]
+      },
+      "goalText" : {
+        "default" : [
+          "^cyan;Я хочу быть <originalArticle> <originalSpecies>, снова!"
+        ]
+      },
+      "completionText" : {
+        "default" : {
+          "default" : [
+            "Спасибо! Приятно вернуться!"
+          ]
+        }
+      }
+    },
+    "goalSpecies" : "originalSpecies",
+    "portraitParameter" : "questGiver",
+    "requireTurnIn" : true,
+    "indicators" : ["questGiver"],
+
+    "objectives" : [
+      {
+        "id" : "transform",
+        "text" : "Обратитесь <questGiver> обратно в <originalArticle> <originalSpecies>"
+      },
+      {
+        "id" : "return",
+        "text" : "Вернуться к <questGiver>"
+      }
+    ],
+
+    "initialCompassTarget" : {
+      "targetType" : "parameter",
+      "target" : "questGiver"
+    }
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "id" : "sbq_escort_vore.generated",
+  "parameters" : {
+    "questGiver" : {
+      "type" : "entity"
+    },
+    "targetNpcType" : {
+      "type" : "npcType",
+      "example" : {
+        "name" : "Joe",
+        "species" : "human",
+        "typeName" : "villager"
+      }
+    },
+    "spawnPoint" : {
+      "type" : "location"
+    }
+  },
+  "moneyRange" : [10, 50],
+  "rewards" : [ ],
+  "rewardParameters" : [ "rewards" ],
+  "canBeAbandoned" : true,
+  "ephemeral" : true,
+
+  "updateDelta" : 60,
+  "script" : "/quests/scripts/generated/sbq_escort_vore.lua",
+  "scriptConfig" : {
+    "portraits" : {
+      "default" : "questGiver",
+      "objective" : "targetNpcType"
+    },
+    "generatedText" : {
+      "fluff" : [
+        ["friend", [
+          "друг",
+          "коллега",
+          "двоюродный брат",
+          "работник",
+          "старый друг",
+          "date"
+        ]],
+        ["earlier", [
+          "ранее",
+          "не так давно",
+          "ранее сегодня",
+          "вчера вечером",
+          "вчера"
+        ]],
+        ["activity1", [
+          "обсудить сон, который я видел(а) <activity2>",
+          "разработка планов создания мюзикла о <activity2>",
+          "обсудить нашу любовь к <activity2>",
+          "спланировать танцевальное шоу на тему <activity2>",
+          "рассказать о некоторых фотографиях <activity2> Я нарисовал(а)",
+          "спланировать произведение искусства, вдохновленное <activity2>",
+          "проводить время вместе",
+          "спорить о <activity2>"
+        ]],
+        ["activity2", [
+          "Gleaps",
+          "Glitch princesses",
+          "pirates",
+          "Poptops",
+          "skeletons",
+          "vegetable farming",
+          "inappropriate hats",
+          "cats",
+          "video-games",
+          "comic books",
+          "exotic fruits",
+          "classic literature",
+          "forest fires",
+          "hands",
+          "the golden age of space piracy",
+          "tiny boats"
+        ]],
+        ["activityfloran", [
+          "немного боевой практики",
+          "немного охотничьей практики",
+          "изготовление мохнатых изделий",
+          "некоторые виды практики",
+          "частные причины"
+        ]],
+        ["glitchworry1", [
+          "Uneasy",
+          "Distressed",
+          "Perplexed"
+        ]],
+        ["glitchworry2", [
+          "Concerned",
+          "Worried",
+          "Panicked"
+        ]],
+        ["appreciation", [
+          "<targetNpcType.pronoun.capitalSubject> и я очень благодарен(на)!",
+          "Прими это в знак моей признательности.",
+          "Я уверен(а) <targetNpcType.pronoun.copulative> с облегчением, что ты рядом!",
+          "Я не знаю, что бы я делал(а) без тебя!"
+        ]]
+      ],
+      "title" : {
+        "default" : [
+          "<targetNpcType>'s сопровождение",
+          "Сопроводить <targetNpcType>"
+        ]
+      },
+      "goalText" : {
+        "default" : [
+          "^cyan;Мой друг <targetNpcType> еще не прибыл(а)."
+        ],
+        "floran" : [
+          "^cyan;Друг Флорана <targetNpcType> пропал(а) без вести."
+        ],
+        "glitch" : [
+          "^cyan;<glitchworry2>. Мой друг <targetNpcType> еще не прибыл(а)."
+        ]
+      },
+      "text" : {
+        "default" : {
+          "default" : [
+            "Мой <friend> ^orange;<targetNpcType>^white; должен(на) был(а) встретиться со мной, чтобы мы могли <activity1> <earlier>. <targetNpcType.pronoun.capitalSubject> вероятно, заблудился(ась), добираясь сюда - последнее место, где я видел(а) <targetNpcType.pronoun.object> был(а) ^orange;<spawnPoint>^white;<spawnPoint.direction>. ^green;Не мог(ла) бы ты пойти туда и принести <targetNpcType.pronoun.object> и вернутся ко мне^white;?"
+          ],
+          "floran" : [
+            "Друг Флорана ^orange;<targetNpcType>^white; должен(на) был(а) встретиться с Флораном для <activityfloran> <earlier>. <targetNpcType> Наверное, заблудился(ась)... Последний раз Флоран видел(а) его в ^orange;<spawnPoint>^white;<spawnPoint.direction>. ^green;Не мог(ла) бы ты помочь Флорану найти <targetNpcType.pronoun.object>^white;?"
+          ],
+          "glitch" : [
+            "<glitchworry2>. Мой <friend> ^orange;<targetNpcType>^white;должен(на) был(а) встретиться со мной, чтобы мы могли <activity1> <earlier>. <targetNpcType.pronoun.capitalSubject> вероятно, заблудился(ась), добираясь сюда - последнее место, где я видел(а) <targetNpcType.pronoun.object> был(а) ^orange;<spawnPoint>^white;<spawnPoint.direction>. ^green;Не мог(ла) бы ты пойти туда и привести <targetNpcType.pronoun.object> и вернутся ко мне^white;?"
+          ]
+        }
+      },
+      "completionText" : {
+        "default" : {
+          "default" : [
+            "Спасибо, что привел(а) <targetNpcType> его обратно! <appreciation>"
+          ],
+          "floran" : [
+            "Спасибо, что привел(а) <targetNpcType> обратно для Флорана!"
+          ],
+          "glitch" : [
+            "Успокоился(ась). Спасибо, что привел(а) его <targetNpcType> обратно. <appreciation>"
+          ]
+        }
+      },
+      "failureText" : {
+        "default" : [
+          "Не беспокойтесь - я уверен(а) <questGiver>'друг восстановится в более безопасном месте."
+        ]
+      }
+    },
+    "goalDistance" : 10.0,
+    "requireTurnIn" : true,
+
+    "objectives" : [
+      {
+        "id" : "find",
+        "text" : "Найди <questGiver>'s друга <targetNpcType>"
+      },
+      {
+        "id" : "bring",
+        "text" : "Приведи <targetNpcType> его обратно в <questGiver> безопасности"
+      },
+      {
+        "id" : "return",
+        "text" : "Поговори с <questGiver>"
+      }
+    ],
+
+    "initialCompassTarget" : {
+      "targetType" : "parameter",
+      "target" : "spawnPoint"
+    }
+  }
+}
