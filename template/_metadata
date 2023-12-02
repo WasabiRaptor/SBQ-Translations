@@ -1,0 +1,12 @@
+{
+	"version" : "0.1",
+	"tags" : "",
+	"author" : "Someone cool",
+	"description" : "The [Language] translation for Starbecue",
+	"link" : "https://github.com/Zygahedron/Starbecue",
+	"name" : "SBQ [Language] Translation", // the name other mods check for
+	"friendlyName" : "SBQ [Language] Translation", // the string players would see
+	"includes" : [
+		"Starbecue"
+	]
+}
