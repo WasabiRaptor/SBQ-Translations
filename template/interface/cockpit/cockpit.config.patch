@@ -1,8 +1,0 @@
-[
-	//Adds an icon and description to the garden fireplace
-
-	{ "op": "add", "path": "/displayDungeons/sbqGardenFireplace", "value":
-	{"description" : "Anomalous spatial distortions detected within a small ruined structure.", "icon" : "/objects/sbq/sbqFireplaceTeleporter/sbqFireplaceTeleporterIcon.png" }
-	}
-
-]
